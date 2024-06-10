@@ -1,0 +1,42 @@
+<?php
+
+session_start();
+include "connection.php";
+
+$username = $_POST["u"];
+$password = $_POST["p"];
+$rememberme = $_POST["r"];
+
+if (empty($username)) {
+    echo ("Please Enter Username");
+} else if (empty($password)) {
+    echo ("Please enter your Password.");
+} else if (strlen($password) > 20 || strlen($password) < 5) {
+    echo ("Password must contain BETWEEN 5 to 20 characters.");
+} else {
+
+    $rs = Database::search("SELECT * FROM `user` WHERE `username`='" . $username . "' AND `password`='" . $password . "' AND `user_type_id`='1' ");
+    $num = $rs->num_rows;
+    $data =  $rs->fetch_assoc();
+
+    if ($num == 1 && $data["user_type_id"] == 1) {
+        echo ("success");
+
+        // Admin DATA SAVING in session
+
+        $_SESSION["a"] = $data;
+
+        if ($rememberme == "true") {
+            // Set cookie
+
+            setcookie("username", $username, time() + (60 * 60 * 24 * 365));
+            setcookie("password", $password, time() + (60 * 60 * 24 * 365));
+        } else {
+            // Destroy cookie
+            setcookie("username", "", -1);
+            setcookie("password", "", -1);
+        }
+    } else {
+        echo ("You are not a Admin");
+    }
+}
