@@ -15,7 +15,7 @@
     <title>Falcon Shoes | Home</title>
 </head>
 
-<body data-bs-theme="dark" onload="loadhomeproduct(0); cartalertnavbar();">
+<body data-bs-theme="dark" onload="loadhomeproduct(0); ">
 
 
 

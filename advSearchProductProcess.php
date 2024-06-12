@@ -162,67 +162,53 @@ if ($num2 == 0) {
     for ($i = 0; $i < $num2; $i++) {
         $d = $rs2->fetch_assoc();
 
-        $dataset = $rs->fetch_assoc();
 
 
 
-        if ($dataset["qty"] == 0) {
     ?>
-            <!-- Card -->
+        <!-- Card -->
 
-            <div class="card col-lg-4 col-md-6 col-sm-12" style="width: 350px">
-                <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>"><img src=" <?php echo $d["path"] ?> " class="card-img-top mt-3" alt="..." style="height: 280px;" /></a>
+        <div class="card col-lg-4 col-md-6 col-sm-12" style="width: 350px">
+            <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>"><img src=" <?php echo $d["path"] ?> " class="card-img-top mt-3" alt="..." style="height: 280px;" /></a>
 
-                <div class="card-body">
-                    <h5 class="card-title text-center pfont"> <?php echo $d["name"] ?> </h5>
-                    <p class="card-text mt-3 text-center psubfont"> <?php echo $d["description"] ?> </p>
-                    <h3 class="card-title text-center psubfont"> Rs:<?php echo $d["price"] ?> </h3>
-
-
+            <div class="card-body">
+                <h5 class="card-title text-center pfont"> <?php echo $d["name"] ?> </h5>
+                <p class="card-text mt-3 text-center psubfont"> <?php echo $d["description"] ?> </p>
+                <h3 class="card-title text-center psubfont"> Rs:<?php echo $d["price"] ?> </h3>
 
 
+                <?php
+
+                if ($d["qty"] > 0) {
+                ?>
                     <div class="row gap-2 d-flex justify-content-center align-items-center mt-4">
                         <!-- <a href="#" class="btn btn-primary col-5" >Add cart &nbsp; <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a> -->
                         <!-- <a href="#" class="btn btn-success col-5">Buy Now &nbsp; <i class="fa-regular fa-credit-card" style="color: #ffffff;"></i></a> -->
                         <!-- <a href="#" class="btn btn-danger col-10">Add to watchlist &nbsp; <i class="fa-solid fa-heart" style="color: #ffffff;"></i></a> -->
-                        <span class="badge text-bg-danger text-center col-12 mt-2 py-2" id="stockStatus">Out Of Stock</span>
-
+                        <span class="badge text-bg-warning text-center col-12 mt-3 py-2" id="stockStatus">In Stock</span>
+                        <!-- <span class="badge text-bg-info text-center col-12 mt-3 py-2" id="stockStatus">Available Quantity :&nbsp;</span> -->
                     </div>
-                </div>
-            </div>
-
-            <!-- Card -->
-        <?php
-        } else {
-        ?>
-            <!-- Card -->
-
-            <div class="card col-lg-4 col-md-6 col-sm-12" style="width: 350px">
-                <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>"><img src=" <?php echo $d["path"] ?> " class="card-img-top mt-3" alt="..." style="height: 280px;" /></a>
-
-                <div class="card-body">
-                    <h5 class="card-title text-center pfont"> <?php echo $d["name"] ?> </h5>
-                    <p class="card-text mt-3 text-center psubfont"> <?php echo $d["description"] ?> </p>
-                    <h3 class="card-title text-center psubfont"> Rs:<?php echo $d["price"] ?> </h3>
-
-
-
-
+                <?php
+                } else {
+                ?>
                     <div class="row gap-2 d-flex justify-content-center align-items-center mt-4">
                         <!-- <a href="#" class="btn btn-primary col-5" >Add cart &nbsp; <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a> -->
                         <!-- <a href="#" class="btn btn-success col-5">Buy Now &nbsp; <i class="fa-regular fa-credit-card" style="color: #ffffff;"></i></a> -->
                         <!-- <a href="#" class="btn btn-danger col-10">Add to watchlist &nbsp; <i class="fa-solid fa-heart" style="color: #ffffff;"></i></a> -->
-                        <span class="badge text-bg-warning text-center col-12 mt-1 py-2" id="stockStatus">In Stock</span>
-                    
-
-
+                        <span class="badge text-bg-danger text-light col-12 mt-3 py-2" id="stockStatus">Out Of Stock</span>
                     </div>
-                </div>
-            </div>
+                <?php
+                }
 
-            <!-- Card -->
+
+                ?>
+
+            </div>
+        </div>
+
+        <!-- Card -->
     <?php
-        }
+
     }
 
     ?>

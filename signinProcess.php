@@ -2,14 +2,12 @@
 session_start();
 include "connection.php";
 
-$username = $_POST["u"];
+// $username = $_POST["u"];
 $email = $_POST["e"];
 $password = $_POST["p"];
 $rememberme = $_POST["r"];
 
-if (empty($username)) {
-    echo ("Please enter your Username");
-} else if (empty($email)) {
+if (empty($email)) {
     echo ("Please Enter Your Email Address.");
 } else if (strlen($email) > 100) {
     echo ("Email Address Must Contain LOWER THAN 100 characters.");
@@ -21,7 +19,7 @@ if (empty($username)) {
     echo ("Password must contain BETWEEN 5 to 20 characters.");
 } else {
 
-    $rs = Database::search("SELECT * FROM `user` WHERE `username`='" . $username . "' AND `password`='" . $password . "'");
+    $rs = Database::search("SELECT * FROM `user` WHERE `email`='" . $email . "' AND `password`='" . $password . "'");
     $num = $rs->num_rows;
     $d = $rs->fetch_assoc();
 
@@ -36,12 +34,12 @@ if (empty($username)) {
             if ($rememberme == "true") {
                 // Set cookie
 
-                setcookie("username", $username, time() + (60 * 60 * 24 * 365));
+                // setcookie("username", $username, time() + (60 * 60 * 24 * 365));
                 setcookie("email", $email, time() + (60 * 60 * 24 * 365));
                 setcookie("password", $password, time() + (60 * 60 * 24 * 365));
             } else {
                 // Destroy cookie
-                setcookie("username", "", -1);
+                // setcookie("username", "", -1);
                 setcookie("email", "", -1);
                 setcookie("password", "", -1);
             }
@@ -50,6 +48,6 @@ if (empty($username)) {
             echo ("Inactive User");
         }
     } else {
-        echo ("Invalid Username OR Password.");
+        echo ("Invalid Email OR Password.");
     }
 }

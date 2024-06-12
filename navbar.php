@@ -89,7 +89,7 @@ session_start();
                 <!-- cart  -->
                 <div class="d-flex flex-lg-grow-1 justify-content-center align-items-center mt-4 mt-lg-0">
                     <a href="cart.php"><img src="resources/Images/cart.svg" alt="loading..." style="cursor: pointer;"></a>
-                    <span class="ms-3 mb-2 top-0 start-100 translate-middle badge rounded-pill bg-danger d-block" id="alertnavbar"></span>
+                    <span class="ms-3 mb-2 top-0 start-100 translate-middle badge rounded-pill bg-danger d-block" id="alertnavbar" onload="cartalertnavbar();"></span>
                 </div>
                 <!-- cart  -->
 

@@ -101,56 +101,56 @@ function showTwo() {
  * error, an error message is displayed.
  */
 function signup() {
-  var fname = document.getElementById("fname");
-  var lname = document.getElementById("lname");
-  var email = document.getElementById("email");
-  var mobile = document.getElementById("mobile");
-  var username = document.getElementById("username");
-  var password = document.getElementById("password");
+    var fname = document.getElementById("fname");
+    var lname = document.getElementById("lname");
+    var email = document.getElementById("email");
+    var mobile = document.getElementById("mobile");
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
 
-  var form = new FormData();
-  form.append("f", fname.value);
-  form.append("l", lname.value);
-  form.append("e", email.value);
-  form.append("m", mobile.value);
-  form.append("u", username.value);
-  form.append("p", password.value);
+    var form = new FormData();
+    form.append("f", fname.value);
+    form.append("l", lname.value);
+    form.append("e", email.value);
+    form.append("m", mobile.value);
+    form.append("u", username.value);
+    form.append("p", password.value);
 
-  var request = new XMLHttpRequest();
+    var request = new XMLHttpRequest();
 
-  request.onreadystatechange = function () {
-    if (request.status == 200 && request.readyState == 4) {
-      var response = request.responseText;
+    request.onreadystatechange = function () {
+        if (request.status == 200 && request.readyState == 4) {
+            var response = request.responseText;
 
-      if (response == "Success") {
-        Swal.fire({
-          title: response,
-          text: "Good Job",
-          icon: "success",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            window.location.reload();
-          }
-        });
+            if (response == "Success") {
+                Swal.fire({
+                    title: "Sucessfully Registered",
+                    text: "Good Job",
+                    icon: "success",
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.reload();
+                    }
+                });
 
-        // fname.value = "";
-        // lname.value = "";
-        // email.value = "";
-        // mobile.value = "";
-        // username.value = "";
-        // password.value = "";
-      } else {
-        Swal.fire({
-          title: response,
-          text: "oops",
-          icon: "error",
-        });
-      }
-    }
-  };
+                // fname.value = "";
+                // lname.value = "";
+                // email.value = "";
+                // mobile.value = "";
+                // username.value = "";
+                // password.value = "";
+            } else {
+                Swal.fire({
+                    title: response,
+                    text: "oops",
+                    icon: "error",
+                });
+            }
+        }
+    };
 
-  request.open("POST", "signUpProcess.php", true);
-  request.send(form);
+    request.open("POST", "signUpProcess.php", true);
+    request.send(form);
 }
 
 // USER SIGNUP ----------------------------------------------------------------------
@@ -170,13 +170,13 @@ function signup() {
 
 // USER SIGNIN ----------------------------------------------------------------------
 function signin() {
-    var username = document.getElementById("un");
+    // var username = document.getElementById("un");
     var email = document.getElementById("useremail");
     var password = document.getElementById("password2");
     var rememberme = document.getElementById("rm");
 
     var form = new FormData();
-    form.append("u", username.value);
+    // form.append("u", username.value);
     form.append("e", email.value);
     form.append("p", password.value);
     form.append("r", rememberme.checked);
@@ -498,8 +498,6 @@ function signout() {
             var response = request.responseText;
             if (response == "success") {
                 window.location.reload();
-                window.location="index.php";
-                
             }
         }
     }
@@ -2064,9 +2062,14 @@ function cartalertnavbar() {
         if (r.readyState == 4 & r.status == 200) {
             var response = r.responseText;
             // alert(response);
+            if (response != "nouser") {
+                var alert = document.getElementById("alertnavbar");
+                alert.innerHTML = response;
+            } else {
+                var alert = document.getElementById("alertnavbar");
+                alert.innerHTML = "0";
+            }
 
-            var alert = document.getElementById("alertnavbar");
-            alert.innerHTML = response;
 
 
 

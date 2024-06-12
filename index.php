@@ -68,10 +68,7 @@
 
 
 
-        <div class="mt-3">
-            <label for="form-label" class="maininputfield"> &nbsp <i class="fa-solid fa-user-tie"></i> &nbsp; Username:</label>
-            <input type="text" class="form-control mt-1 inputfont bg-transparent border-light" id="un" value="<?php echo $username ?>" />
-        </div>
+        
 
         <div class="mt-3">
             <label for="form-label" class="maininputfield"> &nbsp <i class="fa-solid fa-user-tie"></i> &nbsp; Email:</label>
