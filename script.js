@@ -735,6 +735,8 @@ function sizeReg() {
 // ADMIN SIGNIN ----------------------------------------------------------------------
 
 function adminSignin() {
+    var spin = document.getElementById("spinner");
+
 
     var un = document.getElementById("aun");
     var pw = document.getElementById("apw");
@@ -752,16 +754,28 @@ function adminSignin() {
             var response = request.responseText;
             if (response == "success") {
 
-                Swal.fire({
-                    title: "Login Success",
-                    text: response,
-                    icon: "success"
-                }).then((result) => {
 
-                    if (result.isConfirmed) {
-                        window.location = "adminDashboard.php";
-                    }
-                });
+                spin.classList.remove("d-none");
+
+                function timer() {
+
+                    Swal.fire({
+                        title: "Login Success",
+                        text: response,
+                        icon: "success"
+                    }).then((result) => {
+
+                        if (result.isConfirmed) {
+                            window.location = "adminDashboard.php";
+                        }
+                    });
+
+                }
+
+                setTimeout(timer, 2000);
+
+
+
 
 
 
@@ -1474,7 +1488,19 @@ function addtoCart(x) {
                     });
 
 
+                } else if (response == "nouser") {
+                    Swal.fire({
+                        title: "Please Log In First !",
+                        text: "try again after log in OR signup",
+                        icon: "warning"
+                    }).then((result) => {
+
+                        if (result.isConfirmed) {
+                            window.location.href = "index.php";
+                        }
+                    });
                 } else {
+
                     Swal.fire({
                         title: response,
                         text: "success",
@@ -2062,7 +2088,7 @@ function cartalertnavbar() {
         if (r.readyState == 4 && r.status == 200) {
             var response = r.responseText;
 
-            if (response === "nouser") {
+            if (response == "nouser") {
                 alert.innerHTML = ""; // Display an appropriate message
             } else {
                 alert.innerHTML = response;

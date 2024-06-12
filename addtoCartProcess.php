@@ -2,7 +2,7 @@
 include "connection.php";
 session_start();
 
-$user = $_SESSION["u"];
+
 $stockId = $_POST["s"];
 $qty = $_POST["q"];
 // $size = $_POST["si"];
@@ -11,7 +11,8 @@ $qty = $_POST["q"];
 
 
 if (isset($_SESSION["u"])) {
-    
+
+    $user = $_SESSION["u"];
     $rs = Database::search("SELECT * FROM `stock` WHERE `stock_id`='" . $stockId . "'");
     $num = $rs->num_rows;
 
@@ -52,5 +53,5 @@ if (isset($_SESSION["u"])) {
         echo ("Your Stock is not found");
     }
 } else {
-    header("location:index.php");
+    echo ("nouser");
 }
