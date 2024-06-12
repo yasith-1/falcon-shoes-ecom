@@ -52,8 +52,8 @@ if ($num2 == 0) {
 
             <div class="card-body">
                 <h5 class="card-title text-center pfont"> <?php echo $d["name"] ?> </h5>
-                <p class="card-text mt-3 text-center psubfont"> <?php echo $d["description"] ?> </p>
-                <h3 class="card-title text-center psubfont"> Rs:<?php echo $d["price"] ?> </h3>
+                <p class="card-text mt-3 text-center text-muted psubfont"> <?php echo $d["description"] ?> </p>
+                <h3 class="card-title text-center fw-semibold fs-6 psubfont"> Rs&nbsp;.&nbsp;<?php echo $d["price"] ?> </h3>
 
 
                 <?php
@@ -65,7 +65,7 @@ if ($num2 == 0) {
                         <!-- <a href="#" class="btn btn-success col-5">Buy Now &nbsp; <i class="fa-regular fa-credit-card" style="color: #ffffff;"></i></a> -->
                         <!-- <a href="#" class="btn btn-danger col-10">Add to watchlist &nbsp; <i class="fa-solid fa-heart" style="color: #ffffff;"></i></a> -->
                         <span class="badge text-bg-warning text-center col-12 mt-3 py-2" id="stockStatus">In Stock</span>
-                        <span class="badge text-bg-info text-center col-12 mt-3 py-2" id="stockStatus">Available Quantity :&nbsp;<?php echo $d["qty"] ?></span>
+                        <span class="badge bg-success text-center col-12 mt-3 py-2" id="stockStatus">Available Quantity :&nbsp;<?php echo $d["qty"] ?></span>
 
                     </div>
                 <?php

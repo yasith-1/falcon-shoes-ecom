@@ -25,7 +25,7 @@ if (isset($user)) {
         <title>Falcon Shoes Cart</title>
     </head>
 
-    <body onload="loadCart();">
+    <body onload="loadCart(); cartalertnavbar();">
         <!-- navbar  -->
         <?php include "navbar.php"; ?>
         <!-- navbar  -->

@@ -19,7 +19,7 @@ if (isset($user)) {
         <title>Falcon Shoes</title>
     </head>
 
-    <body>
+    <body onload="cartalertnavbar();">
         <!-- Nav Bar -->
         <?php include "navBar.php"; ?>
         <!-- Nav Bar -->
@@ -93,7 +93,7 @@ if (isset($user)) {
                 ?>
                     <div class="col-12 text-center mt-5">
                         <h2>You have not placed any order yet</h2>
-                        <a href="index.php" class="btn btn-primary">Start Shopping</a>
+                        <a href="home.php" class="btn btn-primary">Start Shopping</a>
                     </div>
                 <?php
                 }

@@ -24,13 +24,13 @@ session_start();
         <div class="container-fluid">
             <div class="row">
                 <div class="col-6">
-                    <span class="text-warning text-start fw-semibold" style="font-family: poppins; font-size: 14px; letter-spacing:1px;">Welcome !</span>
-                    &nbsp;&nbsp;&nbsp;
+                    <span class="text-warning text-start fw-semibold" style="font-family: poppins; font-size: 14px; letter-spacing:1px;">Welcome</span>
+                    &nbsp;
                     <?php
                     if (isset($_SESSION["u"])) {
                         $data = $_SESSION["u"];
                     ?>
-                        <span class="text-warning text-start fw-semibold" style="font-family: poppins; font-size: 14px; letter-spacing:1px;"><?php echo $data["fname"] ?></span>
+                        <span class="text-warning text-start fw-semibold" style="font-family: poppins; font-size: 14px; letter-spacing:1px;"><?php echo $data["fname"] ?> !</span>
                         &nbsp;&nbsp;
                         <span class="text-start fw-medium r" style="font-family: poppins; font-size: 14px; letter-spacing:1px;" onclick="signout();">Log Out &nbsp;<i class="fa-solid fa-right-from-bracket btnhover" style="color: #ffffff;"></i></span>
                     <?php
@@ -89,7 +89,7 @@ session_start();
                 <!-- cart  -->
                 <div class="d-flex flex-lg-grow-1 justify-content-center align-items-center mt-4 mt-lg-0">
                     <a href="cart.php"><img src="resources/Images/cart.svg" alt="loading..." style="cursor: pointer;"></a>
-                    <span class="ms-3 mb-2 top-0 start-100 translate-middle badge rounded-pill bg-danger d-block" id="alertnavbar" onload="cartalertnavbar();"></span>
+                    <span class="ms-3 mb-2 top-0 start-100 translate-middle badge rounded-pill bg-danger d-block" id="alertnavbar" ></span>
                 </div>
                 <!-- cart  -->
 

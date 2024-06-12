@@ -2054,32 +2054,24 @@ function contactbtn() {
 
 
 function cartalertnavbar() {
-    // alert("ok");
+    var alert = document.getElementById("alertnavbar");
 
     var r = new XMLHttpRequest();
 
     r.onreadystatechange = function () {
-        if (r.readyState == 4 & r.status == 200) {
+        if (r.readyState == 4 && r.status == 200) {
             var response = r.responseText;
-            // alert(response);
-            if (response != "nouser") {
-                var alert = document.getElementById("alertnavbar");
-                alert.innerHTML = response;
+
+            if (response === "nouser") {
+                alert.innerHTML = "0"; // Display an appropriate message
             } else {
-                var alert = document.getElementById("alertnavbar");
-                alert.innerHTML = "0";
+                alert.innerHTML = response;
             }
-
-
-
-
-
         }
     };
 
     r.open("POST", "cartCountNumProcess.php", true);
     r.send();
-
 }
 
 

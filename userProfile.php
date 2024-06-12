@@ -36,7 +36,7 @@ if (isset($_SESSION["u"])) {
 
     </head>
 
-    <body class="userprofileimage">
+    <body class="userprofileimage" onload="cartalertnavbar();">
 
         <?php include "navbar.php"; ?>
 

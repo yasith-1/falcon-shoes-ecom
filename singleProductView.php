@@ -32,7 +32,7 @@ if (isset($stockId)) {
         </style>
     </head>
 
-    <body class="singleproductbody">
+    <body class="singleproductbody" onload="cartalertnavbar();">
 
 
         <?php include "navbar.php"; ?>
