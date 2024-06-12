@@ -9,42 +9,48 @@ $qty = $_POST["q"];
 
 // echo($stockId);
 
-$rs = Database::search("SELECT * FROM `stock` WHERE `stock_id`='" . $stockId . "'");
-$num = $rs->num_rows;
 
-if ($num > 0) {
-    // echo("In stock");
+if (isset($_SESSION["u"])) {
+    
+    $rs = Database::search("SELECT * FROM `stock` WHERE `stock_id`='" . $stockId . "'");
+    $num = $rs->num_rows;
 
-    $d = $rs->fetch_assoc();
-    $stockqty = $d["qty"];
+    if ($num > 0) {
+        // echo("In stock");
 
-    $rs2 = Database::search("SELECT * FROM `cart` WHERE `user_user_id`='" . $user["user_id"] . "' AND `stock_stock_id`='" . $stockId . "'");
-    $num2 = $rs2->num_rows;
+        $d = $rs->fetch_assoc();
+        $stockqty = $d["qty"];
 
-    if ($num2 > 0) {
-        // Update
+        $rs2 = Database::search("SELECT * FROM `cart` WHERE `user_user_id`='" . $user["user_id"] . "' AND `stock_stock_id`='" . $stockId . "'");
+        $num2 = $rs2->num_rows;
 
-        $d2 = $rs2->fetch_assoc();
-        $newqty = $qty + $d2["cart_qty"];
+        if ($num2 > 0) {
+            // Update
 
-        if ($stockqty >= $newqty) {
-            // Update qury
-            Database::iud("UPDATE `cart` SET `cart_qty`='" . $newqty . "' WHERE `cart_id`='" . $d2["cart_id"] . "'");
-            echo ("Cart Item Updated Successfully");
+            $d2 = $rs2->fetch_assoc();
+            $newqty = $qty + $d2["cart_qty"];
+
+            if ($stockqty >= $newqty) {
+                // Update qury
+                Database::iud("UPDATE `cart` SET `cart_qty`='" . $newqty . "' WHERE `cart_id`='" . $d2["cart_id"] . "'");
+                echo ("Cart Item Updated Successfully");
+            } else {
+                echo ("Stock Quantity has been exceeded !");
+            }
         } else {
-            echo ("Stock Quantity has been exceeded !");
+            // Insert
+
+            if ($stockqty >= $qty) {
+                // Insert qury
+                Database::iud("INSERT INTO `cart` (`cart_qty`,`user_user_id`,`stock_stock_id`) VALUES ('" . $qty . "','" . $user["user_id"] . "','" . $stockId . "')");
+                echo ("Cart Item Added Successfully");
+            } else {
+                echo ("Stock Quantity has been exceeded !");
+            }
         }
     } else {
-        // Insert
-
-        if ($stockqty >= $qty) {
-            // Insert qury
-            Database::iud("INSERT INTO `cart` (`cart_qty`,`user_user_id`,`stock_stock_id`) VALUES ('" . $qty . "','" . $user["user_id"] . "','" . $stockId . "')");
-            echo ("Cart Item Added Successfully");
-        } else {
-            echo ("Stock Quantity has been exceeded !");
-        }
+        echo ("Your Stock is not found");
     }
 } else {
-    echo ("Your Stock is not found");
+    header("location:index.php");
 }

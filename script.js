@@ -2063,7 +2063,7 @@ function cartalertnavbar() {
             var response = r.responseText;
 
             if (response === "nouser") {
-                alert.innerHTML = "0"; // Display an appropriate message
+                alert.innerHTML = ""; // Display an appropriate message
             } else {
                 alert.innerHTML = response;
             }
@@ -2207,3 +2207,8 @@ function loadchart3() {
     request.open("POST", "loadChartProcess2.php", true);
     request.send();
 }
+
+
+
+
+

@@ -21,7 +21,7 @@
             </div>
 
 
-            <div class="col-lg-7 col-md-12 d-flex align-items-center justify-content-center border border-start-0 border-info-subtle" style=" box-shadow: 0px 0px 15px 1px rgba(70, 70, 70, 0.301);">
+            <div class="col-lg-7 col-md-12 d-flex align-items-center justify-content-center border border-start-0 border-secondary" style=" box-shadow: 0px 0px 15px 1px rgba(70, 70, 70, 0.301);">
 
 
                 <div class="row">

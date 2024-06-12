@@ -3,9 +3,9 @@
 session_start();
 // include "connection.php";
 
-$user = $_SESSION["u"];
 
-if (isset($user)) {
+
+if (isset($_SESSION["u"])) {
 
 
 ?>
@@ -20,7 +20,6 @@ if (isset($user)) {
 
         <link rel="stylesheet" href="bootstrap.css">
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="resources/Images/falcon.png" />
         <link rel="shortcut icon" href="resources/Images/orgficon.png" type="image/x-icon">
         <title>Falcon Shoes Cart</title>
     </head>
@@ -64,5 +63,5 @@ if (isset($user)) {
 
 
 } else {
-    header("location:index.php");
+    header("location:warningmodal.php");
 }
