@@ -197,25 +197,25 @@
     <div class="col-10 offset-1 " style="margin-top: 100px; margin-bottom: 100px;">
         <div class="row">
 
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2">
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2 micon">
                 <img src="resources/Images/delivery.png" alt="loading...">
                 <h5 class="mt-1">Fast Delivery</h5>
                 <p>Island wide Fast Delivery </p>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2">
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2 micon">
                 <img src="resources/Images/payment.png" alt="loading...">
                 <h5 class="mt-1">Secure Payment</h5>
                 <p>shop with confidence, every time, everywhere</p>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2">
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2 micon">
                 <img src="resources/Images/cod.png" alt="loading...">
                 <h5 class="mt-1">COD Accepted</h5>
                 <p>Pay us easily at your doorstep</p>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2">
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2 micon">
                 <img src="resources/Images/exchanging.png" alt="loading...">
                 <h5 class="mt-1">14 days Return Accept</h5>
                 <p>love it or swap it. Your satisfaction, guaranteed </p>

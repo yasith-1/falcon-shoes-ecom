@@ -168,13 +168,13 @@ if ($num2 == 0) {
     ?>
         <!-- Card -->
 
-        <div class="card col-lg-4 col-md-6 col-sm-12 mycard" style="width: 350px">
+        <div class="card col-md-6  mycard " style="width: 350px">
             <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>"><img src=" <?php echo $d["path"] ?> " class="card-img-top mt-3" alt="..." style="height: 280px;" /></a>
 
             <div class="card-body">
                 <h5 class="card-title text-center pfont"> <?php echo $d["name"] ?> </h5>
                 <p class="card-text mt-3 text-center text-muted psubfont"> <?php echo $d["description"] ?> </p>
-                <h3 class="card-title text-center fw-semibold fs-6 psubfont"> Rs&nbsp;.&nbsp;<?php echo $d["price"] ?> </h3>
+                <h3 class="card-title text-center fw-semibold fs-5 psubfont"> Rs&nbsp;.&nbsp;<?php echo $d["price"] ?> </h3>
 
 
                 <?php
@@ -185,8 +185,8 @@ if ($num2 == 0) {
                         <!-- <a href="#" class="btn btn-primary col-5" >Add cart &nbsp; <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a> -->
                         <!-- <a href="#" class="btn btn-success col-5">Buy Now &nbsp; <i class="fa-regular fa-credit-card" style="color: #ffffff;"></i></a> -->
                         <!-- <a href="#" class="btn btn-danger col-10">Add to watchlist &nbsp; <i class="fa-solid fa-heart" style="color: #ffffff;"></i></a> -->
-                        <span class="badge text-bg-warning text-center col-12 mt-3 py-2" id="stockStatus">In Stock</span>
-                        <span class="badge bg-success text-center col-12 mt-3 py-2" id="stockStatus">Available Quantity :&nbsp;<?php echo $d["qty"] ?></span>
+                        <span class="border border-secondary rounded-4 text-center text-warning fw-bold fs-6 col-12 mt-3 py-2" id="stockStatus">In Stock</span>
+                        <!-- <span class="badge bg-success text-center col-12 mt-3 py-2" id="stockStatus">Available Quantity :&nbsp;<?php echo $d["qty"] ?></span> -->
                     </div>
                 <?php
                 } else {
@@ -195,7 +195,7 @@ if ($num2 == 0) {
                         <!-- <a href="#" class="btn btn-primary col-5" >Add cart &nbsp; <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a> -->
                         <!-- <a href="#" class="btn btn-success col-5">Buy Now &nbsp; <i class="fa-regular fa-credit-card" style="color: #ffffff;"></i></a> -->
                         <!-- <a href="#" class="btn btn-danger col-10">Add to watchlist &nbsp; <i class="fa-solid fa-heart" style="color: #ffffff;"></i></a> -->
-                        <span class="badge text-bg-danger text-light col-12 mt-3 py-2" id="stockStatus">Out Of Stock</span>
+                        <span class="border border-secondary rounded-4 text-center text-danger fw-semibold fs-6 col-12 mt-3 py-2" id="stockStatus">Out Of Stock</span>
                     </div>
                 <?php
                 }

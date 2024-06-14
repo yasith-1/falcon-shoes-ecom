@@ -19,10 +19,13 @@
 }
 
 .loader {
-  width: 4%;
+  width: 7%;
 }
 
 /* preloader ---------------------------------------------------*/
+
+
+
 
 .signIn_Box {
   width: 470px;
@@ -599,6 +602,9 @@ a {
   }
 }
 
+
+/* Product Card effect */
+
 .mycard:hover {
   -webkit-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);
@@ -616,3 +622,35 @@ a {
   z-index: -1;
   
 }
+
+/* Product Card effect */
+
+
+
+
+/* middel home icon*/
+
+.micon:hover {
+  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.747);
+  background: rgba(255, 251, 28, 0.815);
+  border-radius: 20px;
+  color: black;
+  padding: 10px;
+}
+
+.micon::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+ 
+  z-index: -1;
+  
+}
+
+/* middel home icon*/

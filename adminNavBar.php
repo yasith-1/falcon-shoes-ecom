@@ -26,12 +26,19 @@
                     <li class="nav-item ">
                         <a class="nav-link adminnavbarhov text-light" style="font-family: poppins;" aria-current="page" href="adminUser.php">User Management</a>
                     </li>
+
                     <li class="nav-item ">
                         <a class="nav-link adminnavbarhov text-light" style="font-family: poppins;" aria-current="page" href="adminProduct.php">Product Management</a>
                     </li>
+
                     <li class="nav-item ">
                         <a class="nav-link adminnavbarhov text-light" style="font-family: poppins;" aria-current="page" href="adminStock.php">Stock Management</a>
                     </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link adminnavbarhov text-light" style="font-family: poppins;" aria-current="page" href="markAsOutOfStock.php">Stock Status</a>
+                    </li>
+
                     <li class="nav-item ">
                         <a class="nav-link adminnavbarhov text-light" style="font-family: poppins;" aria-current="page" href="adminReport.php">Reports</a>
                     </li>

@@ -14,8 +14,8 @@
 
     <div class="container d-flex justify-content-center align-items-center text-center">
         <div class="row ">
-            <div class="alert alert-light p-5 fs-4 shadow-lg bg-body-tertiary rounded-4 col-12 fw-semibold" role="alert">
-                Dear Customers Please Log In Or SignUp First ! <br> <br><span class="text-warning">After You can Product add to cart ..</span>
+            <div class="alert alert-warning p-5 fs-4 shadow-lg bg-body-tertiary rounded-4 col-12 fw-semibold" role="alert">
+                <h3 style="font-family: poppins;">Dear Customers Please Log In Or Register First ! </h3>
             </div>
 
             <div class="p-4 ">

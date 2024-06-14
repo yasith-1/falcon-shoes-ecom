@@ -24,7 +24,7 @@ if (isset($_SESSION["a"])) {
         <div class="container " style="margin-top: 100px;">
             <div class="row">
                 <!-- Product register -->
-                <div class="col-lg-6 border border-secondary p-2 rounded-4 ">
+                <div class="col-md-6 border border-secondary p-2 me-0 ">
 
 
                     <h2 class="card-title text-center">Product Registration</h2>
@@ -124,7 +124,7 @@ if (isset($_SESSION["a"])) {
                 </div>
 
                 <!-- Stock Management -->
-                <div class="col-lg-6 border border-secondary p-2 rounded-4 mt-lg-0 mt-5 ">
+                <div class="col-md-6 border border-secondary p-2 mt-lg-0 mt-5  ">
                     <h2 class="card-title text-center">Stock Update</h2>
 
                     <div class="mb-3 px-3">
@@ -160,6 +160,9 @@ if (isset($_SESSION["a"])) {
                     </div>
 
                 </div>
+
+
+                
             </div>
         </div>
 

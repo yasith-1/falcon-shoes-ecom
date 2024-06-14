@@ -4,7 +4,7 @@ var loader = document.getElementById("loader");
 
 setTimeout(() => {
     loader.style.display = "none";
-}, 2000);
+}, 1500);
 
 
 
@@ -2238,3 +2238,48 @@ function loadchart3() {
 
 
 
+// Mark as out of stock 
+
+function markAsOutOfStock(s) {
+    var btn = document.getElementById("ststatus");
+    // alert(s);
+
+    var f = new FormData();
+    f.append("stid", s);
+
+    var r = new XMLHttpRequest();
+    r.onreadystatechange = function () {
+        if (r.readyState == 4 & r.status == 200) {
+            var response = r.responseText;
+            // alert(response);
+            if (response == "success") {
+
+                Swal.fire({
+                    title: "Marked As Out Of Stock",
+                    text: "Done",
+                    icon: "success"
+                }).then((result) => {
+
+                    if (result.isConfirmed) {
+                        window.location.reload();
+                    }
+                });
+            } else {
+                Swal.fire({
+                    title: response,
+                    text: "!!!!",
+                    icon: "warning"
+                }).then((result) => {
+
+                    if (result.isConfirmed) {
+                        window.location.reload();
+                    }
+                });
+            }
+
+        }
+    };
+
+    r.open("POST", "markAsOutOfStockProcess.php", true);
+    r.send(f);
+}
