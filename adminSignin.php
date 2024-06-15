@@ -54,7 +54,7 @@
                     ?>
 
                     <div class="col-10 offset-1 mt-5 px-5 bg-transparent">
-                        <label class="form-label inputfont text-light" style="font-family: poppins;font-size: 17px;">&nbsp;<i class="fa-solid fa-file-signature"></i>&nbsp;&nbsp; email </label>
+                        <label class="form-label inputfont text-light" style="font-family: poppins;font-size: 17px;">&nbsp;<i class="fa-solid fa-file-signature"></i>&nbsp;&nbsp; Email </label>
                         <input type="email" class="form-control bg-transparent text-light" id="aemail" value="<?php echo $email  ?> ">
                     </div>
 

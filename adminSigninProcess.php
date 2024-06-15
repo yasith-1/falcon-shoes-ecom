@@ -21,7 +21,7 @@ if (empty($email)) {
     $data =  $rs->fetch_assoc();
     $hash =  password_verify($password, $data["password"]);
 
-    if ($num == 1 &&  $hash == 1) {
+    if ($num == 1 && $data["user_type_id"] == 1 && $hash == 1) {
         echo ("success");
 
         // Admin DATA SAVING in session
