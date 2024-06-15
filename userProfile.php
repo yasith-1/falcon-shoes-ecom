@@ -103,7 +103,7 @@ if (isset($_SESSION["u"])) {
 
                                             <div class="col-12 mt-3">
                                                 <label class="form-label">Email</label>
-                                                <input type="email" class="form-control bg-transparent border-info disabled" style="cursor: not-allowed;" value="<?php echo $d["email"] ?>" id="email" />
+                                                <input type="email" class="form-control bg-transparent border-info " readonly style="cursor: not-allowed;" value="<?php echo $d["email"] ?>" id="email" />
                                             </div>
 
                                             <div class="col-12 mt-3">
@@ -113,13 +113,13 @@ if (isset($_SESSION["u"])) {
 
                                             <div class="col-6 mt-3">
                                                 <label class="form-label">Username</label>
-                                                <input type="text" class="form-control bg-transparent border-info disabled" style="cursor: not-allowed;" value="<?php echo $d["username"] ?>" disabled />
+                                                <input type="text" class="form-control bg-transparent border-info disabled" readonly style="cursor: not-allowed;" value="<?php echo $d["username"] ?>" disabled />
                                             </div>
 
                                             <div class="col-6 mt-3">
                                                 <label class="form-label">Password</label>
                                                 <div class="input-group">
-                                                    <input type="password" class="form-control bg-transparent border-info disabled" style="cursor: not-allowed;" value="<?php echo $d["password"] ?>" id="pw" />
+                                                    <input type="password" class="form-control bg-transparent border-info disabled" readonly style="cursor: not-allowed;" value="<?php echo $d["password"] ?>" id="pw" />
                                                     <span class="input-group-text bg-primary" id="btn3" onclick="userpassword();">
                                                         <i class="fa-regular fa-eye text-white"></i>
                                                     </span>

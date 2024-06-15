@@ -170,6 +170,10 @@ function signup() {
 
 // USER SIGNIN ----------------------------------------------------------------------
 function signin() {
+
+    var spinner = document.getElementById("spin");
+
+
     // var username = document.getElementById("un");
     var email = document.getElementById("useremail");
     var password = document.getElementById("password2");
@@ -187,16 +191,23 @@ function signin() {
         if (request.status == 200 && request.readyState == 4) {
             var response = request.responseText;
             if (response == "Success") {
-                Swal.fire({
-                    title: "Login Success",
-                    text: response,
-                    icon: "success"
-                }).then((result) => {
 
-                    if (result.isConfirmed) {
-                        window.location = "home.php";
-                    }
-                });
+                spinner.classList.remove("d-none");
+
+                function time() {
+                    Swal.fire({
+                        title: "Login Success",
+                        text: response,
+                        icon: "success"
+                    }).then((result) => {
+
+                        if (result.isConfirmed) {
+                            window.location = "home.php";
+                        }
+                    });
+                }
+
+                setTimeout(time, 2000);
 
 
             } else {
@@ -738,12 +749,12 @@ function adminSignin() {
     var spin = document.getElementById("spinner");
 
 
-    var un = document.getElementById("aun");
+    var email = document.getElementById("aemail");
     var pw = document.getElementById("apw");
     var rm = document.getElementById("arm");
 
     var form = new FormData();
-    form.append("u", un.value);
+    form.append("e", email.value);
     form.append("p", pw.value);
     form.append("r", rm.checked);
 
@@ -1831,7 +1842,7 @@ function buyNow(stockId) {
         r.onreadystatechange = function () {
             if (r.readyState == 4 & r.status == 200) {
                 var response = r.responseText;
-                // alert(response);
+                alert(response);
                 var payment = JSON.parse(response);
                 payment.stock_id = stockId;
                 payment.qty = qty.value;

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap.css">
@@ -35,12 +36,12 @@
 
                     session_start();
 
-                    $username = "";
+                    $email = "";
                     $password = "";
 
-                    if (isset($_COOKIE["username"])) {
+                    if (isset($_COOKIE["email"])) {
 
-                        $username = $_COOKIE["username"];
+                        $email = $_COOKIE["email"];
                     }
 
                     if (isset($_COOKIE["password"])) {
@@ -53,8 +54,8 @@
                     ?>
 
                     <div class="col-10 offset-1 mt-5 px-5 bg-transparent">
-                        <label class="form-label inputfont text-light" style="font-family: poppins;font-size: 17px;">&nbsp;<i class="fa-solid fa-file-signature"></i>&nbsp;&nbsp; Username </label>
-                        <input type="email" class="form-control bg-transparent text-light" id="aun" value="<?php echo $username  ?> ">
+                        <label class="form-label inputfont text-light" style="font-family: poppins;font-size: 17px;">&nbsp;<i class="fa-solid fa-file-signature"></i>&nbsp;&nbsp; email </label>
+                        <input type="email" class="form-control bg-transparent text-light" id="aemail" value="<?php echo $email  ?> ">
                     </div>
 
                     <div class="col-10 offset-1 mt-5 mb-5 px-5 bg-transparent">
