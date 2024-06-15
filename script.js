@@ -1687,7 +1687,9 @@ function removeCart(a) {
     Swal.fire({
         title: "Are you sure deleting this item ?",
         text: "Is this action confirm ?",
-        icon: "warning"
+        icon: "warning",
+        showCancelButton: true,
+        cancelButtonColor: "#d33",
     }).then((result) => {
 
         if (result.isConfirmed) {
@@ -2057,26 +2059,7 @@ function contactbtn() {
 
 
 
-// function countItemPerpage() {
-//     // alert("ok");
 
-//     var option = document.getElementById("itemcount");
-
-//     var f =new FormData();
-//     f.append("o",option.value);
-
-//     var r = new XMLHttpRequest();
-
-//     r.onreadystatechange = function () {
-//         if (r.status == 200 & r.readyState == 4) {
-//             var response = r.responseText;
-//             alert(response);
-//         }
-//     }
-
-//     r.open("POST", "loadHomeProductProcess.php", true);
-//     r.send(f);
-// }
 
 
 function cartalertnavbar() {
