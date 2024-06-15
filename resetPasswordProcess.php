@@ -7,22 +7,19 @@ $newpw = $_POST["n"];
 $retypepw = $_POST["r"];
 $vcode = $_POST["v"];
 
-if($newpw != $retypepw){
+if ($newpw != $retypepw) {
     echo ("Password does not match.");
-}else{
+} else {
 
-    $rs = Database::search("SELECT * FROM `user` WHERE `email`='".$email."' AND `v_code`='".$vcode."'");
+    $rs = Database::search("SELECT * FROM `user` WHERE `email`='" . $email . "' AND `v_code`='" . $vcode . "'");
     $num = $rs->num_rows;
 
-    if($num == 1){
+    if ($num == 1) {
 
-        Database::iud("UPDATE `user` SET `password`='".$retypepw."' WHERE `email`='".$email."'");
+        $retypehash = password_hash($retypepw, PASSWORD_DEFAULT);
+        Database::iud("UPDATE `user` SET `password`='" . $retypehash . "' WHERE `email`='" . $email . "'");
         echo ("success");
-
-    }else{
+    } else {
         echo ("Invalid Password or Verification Code");
     }
-
 }
-
-?>

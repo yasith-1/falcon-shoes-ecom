@@ -33,7 +33,7 @@ if (empty($fname)) {
     echo ("Please Enter Your username.");
 } else if (empty($password)) {
     echo ("Please Enter Your Password.");
-} else if (strlen($password) < 5 || strlen($password) > 20) {
+} else if (strlen($password) < 5 || strlen($password) > 100) {
     echo ("Password Must Contain 5 to 20 Characters.");
 } else {
 
@@ -46,8 +46,10 @@ if (empty($fname)) {
 
         // INSERT DATA
 
+        $hashpassword = password_hash($password, PASSWORD_DEFAULT);
+
         Database::iud("INSERT INTO `user`(`fname`,`lname`,`email`,`mobile`,`username`,`password`,`user_type_id`) VALUES 
-        ('" . $fname . "','" . $lname . "','" . $email . "','" . $mobile . "','" . $username . "','" . $password . "','2')");
+        ('" . $fname . "','" . $lname . "','" . $email . "','" . $mobile . "','" . $username . "','" . $hashpassword . "','2')");
 
         echo ("Success");
     }

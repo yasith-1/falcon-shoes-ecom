@@ -19,11 +19,14 @@ if (empty($email)) {
     echo ("Password must contain BETWEEN 5 to 20 characters.");
 } else {
 
-    $rs = Database::search("SELECT * FROM `user` WHERE `email`='" . $email . "' AND `password`='" . $password . "'");
+    // $rs = Database::search("SELECT * FROM `user` WHERE `email`='" . $email . "' AND `password`='" . $password . "'");
+    $rs = Database::search("SELECT * FROM `user` WHERE `email`='" . $email . "'");
     $num = $rs->num_rows;
     $d = $rs->fetch_assoc();
+    $hash =  password_verify($password, $d["password"]);
 
-    if ($num == 1) {
+
+    if ($num == 1 && $hash == 1) {
 
         if ($d["status"] == 1) {
             // Active user
