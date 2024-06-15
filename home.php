@@ -403,6 +403,23 @@
     </div>
 
 
+    <!-- video clip   -->
+
+    <div class="d-flex justify-content-center">
+        <div class="row col-8  row-cols-1 row-cols-sm-2 row-cols-md-6 ">
+            <div class="ratio ratio-4x3">
+                <video controls autoplay muted>
+                    <source src="resources/Images/shoesvideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- video clip   -->
+
+
 
     <?php include "footer.php"; ?>
 
@@ -415,7 +432,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script> -->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
