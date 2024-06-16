@@ -43,7 +43,7 @@ if (isset($stockId)) {
                 <div class="col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center flex-column">
 
 
-                    <img src="<?php echo $d["path"] ?>" class="rounded-4 shadow-lg " alt="Product Image" height="400px">
+                    <img src="<?php echo $d["path"] ?>" class="rounded-4 shadow-lg spv" alt="Product Image" height="400px">
 
 
                     <div class="text-center mt-3 product-rating ">

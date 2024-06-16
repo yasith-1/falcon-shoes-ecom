@@ -654,3 +654,30 @@ a {
 }
 
 /* middel home icon*/
+
+
+
+
+
+/* single produc view effect*/
+
+.spv:hover {
+  -webkit-transform: scale(1.5, 1.5);
+  transform: scale(1.05, 1.05);
+  box-shadow: 0 0 20px 0 rgba(240, 240, 240, 0.623);
+}
+
+.spv::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(117, 117, 117, 0.418);
+  z-index: -1;
+  
+}
+
+
+/* single produc view effect */
