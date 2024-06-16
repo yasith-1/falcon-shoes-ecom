@@ -1842,7 +1842,7 @@ function buyNow(stockId) {
         r.onreadystatechange = function () {
             if (r.readyState == 4 & r.status == 200) {
                 var response = r.responseText;
-                alert(response);
+                // alert(response);
                 var payment = JSON.parse(response);
                 payment.stock_id = stockId;
                 payment.qty = qty.value;
@@ -2235,7 +2235,7 @@ function loadchart3() {
 // Mark as out of stock 
 
 function markAsOutOfStock(s) {
-    var btn = document.getElementById("ststatus");
+
     // alert(s);
 
     var f = new FormData();
@@ -2277,3 +2277,47 @@ function markAsOutOfStock(s) {
     r.open("POST", "markAsOutOfStockProcess.php", true);
     r.send(f);
 }
+
+
+
+
+// genarate invoice from order history 
+function ginvoice(id) {
+    // alert(id);
+    var invoice = document.getElementById("invoiceId");
+    var hide = document.getElementById("hideId");
+    var body = document.getElementById("ohisbody");
+    var r = new XMLHttpRequest();
+    r.onreadystatechange = function () {
+        if (r.readyState == 4 & r.status == 200) {
+            var response = r.responseText;
+            // alert(response);
+            invoice.innerHTML = response;
+            body.classList.add("d-none");
+            hide.className="d-block";
+
+    
+        }
+    };
+
+    r.open("GET", "orderHistoryReportProcess.php?oid=" + id, true);
+    r.send();
+
+}
+// genarate invoice from order history 
+
+
+
+// print order history invoice report
+function genorderhistory() {
+    var originalcontent = document.body.innerHTML;
+    var printarea = document.getElementById("invoiceId").innerHTML;
+
+
+
+    document.body.innerHTML = printarea;
+    window.print();
+    document.body.innerHTML = originalcontent;
+}
+
+// print order history invoice report

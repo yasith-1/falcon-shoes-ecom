@@ -24,9 +24,6 @@
 
 /* preloader ---------------------------------------------------*/
 
-
-
-
 .signIn_Box {
   width: 470px;
   padding: 30px;
@@ -602,31 +599,26 @@ a {
   }
 }
 
-
 /* Product Card effect */
 
 .mycard:hover {
   -webkit-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);
-  box-shadow: 0 0 20px 0 rgba(240, 201, 75, 0.61);
+  box-shadow: 0 0 20px 0 rgba(196, 196, 196, 0.61);
 }
 
-.mycard::after{
+.mycard::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(53, 53, 53, 0);
+  /* background: rgba(53, 53, 53, 0); */
   z-index: -1;
-  
 }
 
 /* Product Card effect */
-
-
-
 
 /* middel home icon*/
 
@@ -640,44 +632,67 @@ a {
   padding: 10px;
 }
 
-.micon::after{
+.micon::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
- 
- 
+
   z-index: -1;
-  
 }
 
 /* middel home icon*/
 
-
-
-
-
 /* single produc view effect*/
 
 .spv:hover {
-  -webkit-transform: scale(1.5, 1.5);
+  -webkit-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);
-  box-shadow: 0 0 20px 0 rgba(240, 240, 240, 0.623);
+  /* box-shadow: 0 0 20px 0 rgba(238, 255, 0, 0.397); */
 }
 
-.spv::after{
+.spv::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(117, 117, 117, 0.418);
+  /* background: rgba(0, 0, 0, 0.295); */
+  font-weight: bold;
   z-index: -1;
-  
 }
 
-
 /* single produc view effect */
+
+/* spv background */
+
+.spvbg {
+  box-shadow: 0 0 10px 0 rgba(231, 231, 231, 0.459);
+}
+
+/* spv background */
+
+
+/* Product Card img effect */
+
+.pcardimg:hover {
+  -webkit-transform: scale(1.09, 1.09);
+  transform: scale(1.09, 1.09);
+  /* box-shadow: 0 0 20px 0 rgba(196, 196, 196, 0.61); */
+}
+
+.pcardimg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(53, 53, 53, 0); */
+  z-index: -1;
+}
+
+/* Product Card img effect */

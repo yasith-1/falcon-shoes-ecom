@@ -32,92 +32,104 @@ if (isset($stockId)) {
         </style>
     </head>
 
-    <body class="singleproductbody" onload="cartalertnavbar();">
+    <body class="d-flex justify-content-center align-items-center min-vh-100" onload="cartalertnavbar();">
 
 
         <?php include "navbar.php"; ?>
 
 
-        <div class="container " style="margin-top:100;">
-            <div class="row shadow-lg bg-body-tertiary rounded-4 mt-5 p-3 ps-1">
-                <div class="col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center flex-column">
+        <div class="container" style="margin-top: 140px;">
+            <div class="card mb-3 bg-body-tertiary rounded-4 px-3 spvbg">
+                <div class="row g-0">
+                    <div class="col-12 col-lg-6 p-4 d-flex flex-column">
+                        <img src="<?php echo $d["path"] ?>" class="img-fluid rounded-4 shadow-lg spv" height="90%" alt="...">
 
-
-                    <img src="<?php echo $d["path"] ?>" class="rounded-4 shadow-lg spv" alt="Product Image" height="400px">
-
-
-                    <div class="text-center mt-3 product-rating ">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <span>4.7(21)</span>
+                        <div class="text-center mt-3 product-rating ">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7(21)</span>
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="col-sm-12 col-md-12 col-lg-6 mt-4">
-                    <h3 class="fs-3 fw-bold text-center text-info" style="font-family: poppins; letter-spacing: 2px;"><?php echo $d["name"] ?></h3>
-                    <div class="product-details">
-
-                        <div class="d-flex align-items-center  ">
-                            <i class="fa-solid fa-circle-check" style="color: #ffd43b;"></i>
-                            &nbsp;
-                            <h6 class=" fw-normal  mt-1 ">Brand &nbsp;: &nbsp;<?php echo $d["brand_name"] ?></h6>
-                        </div>
-
-                        <div class="d-flex align-items-center  ">
-                            <i class="fa-solid fa-circle-check" style="color: #ffd43b;"></i>
-                            &nbsp;
-                            <h6 class=" fw-normal  mt-1">Category &nbsp;: &nbsp;<?php echo $d["cat_name"] ?></h6>
-                        </div>
-
-                        <div class="d-flex align-items-center  ">
-                            <i class="fa-solid fa-circle-check" style="color: #ffd43b;"></i>
-                            &nbsp;
-                            <h6 class=" fw-normal  mt-1">Color &nbsp;: &nbsp;<?php echo $d["color_name"] ?></h6>
-                        </div>
-
-                        <div class="d-flex align-items-center mt">
-                            <i class="fa-solid fa-circle-check" style="color: #ffd43b;"></i>
-                            &nbsp;
-                            <h5 class="product-price mt-1 text-info" style="font-family: poppins;">Rs &nbsp;: &nbsp;<?php echo $d["price"] ?></h5>
-                        </div>
 
 
-                        <p class="mb-3 mt-3 "> &rarr;&nbsp;Description &nbsp;: &nbsp; <?php echo $d["description"] ?></p>
+                    <div class="col-12 col-lg-6">
+                        <div class="card-body px-4 pt-3">
 
-                        <div class="d-flex justify-content-start mt-3 gap-2 col-lg-6 col-12">
-                            <label for="quantity" class="form-label mt-1"> &rarr;&nbsp;Quantity &nbsp;: &nbsp;</label>
-                            <div>
-                                <input type="text" class="form-control " id="qty" placeholder="Enter quantity" min="1">
+                            <h3 class="fs-3 fw-semibold text-center " style="font-family: poppins; letter-spacing: 2px; color: orange;"><?php echo $d["name"] ?></h3>
+
+
+                            <hr style="width: 50%; margin-left: 140px;">
+
+
+                            <div class="d-flex align-items-center mt-3 ">
+                                <i class="fa-solid fa-circle-check" style="color: #ffd43b;"></i>
+                                &nbsp;&nbsp;
+                                <h6 class=" fw-normal  mt-1 ">Brand :&nbsp;<?php echo $d["brand_name"] ?> </h6>
+                            </div>
+
+                            <div class="d-flex align-items-center mt-1">
+                                <i class="fa-solid fa-circle-check" style="color: #ffd43b;"></i>
+                                &nbsp;&nbsp;
+                                <h6 class=" fw-normal  mt-1">Category :&nbsp;<?php echo $d["cat_name"] ?> </h6>
+                            </div>
+
+                            <div class="d-flex align-items-center mt-1">
+                                <i class="fa-solid fa-circle-check" style="color: #ffd43b;"></i>
+                                &nbsp;&nbsp;
+                                <h6 class=" fw-normal  mt-1">Color :&nbsp;<?php echo $d["color_name"] ?> </h6>
+                            </div>
+
+                            <div class="d-flex align-items-center mt-1">
+                                <i class="fa-solid fa-circle-check" style="color: #ffd43b;"></i>
+                                &nbsp;&nbsp;
+                                <h5 class="product-price mt-1 text-info" style="font-family: poppins;">Rs.<?php echo $d["price"] ?> </h5>
+                            </div>
+
+
+                            <p class="mb-3 mt-3 "> &rarr;&nbsp;Description :&nbsp;<?php echo $d["description"] ?> </p>
+
+                            <div class="d-flex justify-content-start flex-row mt-3 gap-2 ">
+                                <label for="qty" class="form-label mt-1"> &rarr;&nbsp;Quantity &nbsp;: &nbsp;</label>
+                                <div>
+                                    <input type="text" class="form-control " id="qty" placeholder="Enter quantity" min="1">
+                                </div>
+                            </div>
+
+                            <?php
+                            if ($d["qty"] == 0) {
+                                // out of stock
+                            ?>
+                                <div class="d-flex justify-content-start mt-3 gap-2 col-lg-6 col-12">
+                                    <label for="quantity" class="form-label mt-1"> &rarr;&nbsp;Available Stock :&nbsp;&nbsp;<span class="badge text-bg-danger"><?php echo ("Out OF Stock") ?></span></label>
+                                </div>
+                            <?php
+                            } else {
+                                // In stock
+                            ?>
+                                <div class="d-flex justify-content-start mt-3 gap-2 col-lg-6 col-12">
+                                    <label for="quantity" class="form-label mt-1"> &rarr;&nbsp;Available Stock :&nbsp;&nbsp;<span class="badge text-bg-danger"><?php echo $d["qty"] ?></span></label>
+                                </div>
+                            <?php
+                            }
+
+
+                            ?>
+
+
+
+
+                            <div class="row g-2 gap-4 mt-5 d-flex justify-content-center pb-sm-2">
+                                <button class="btn btn-success col-sm-8 col-12 col-md-5 spv" style="font-family: poppins;" onclick="addtoCart('<?php echo $d['stock_id'] ?>');">Add to Cart</button>
+                                <button class="btn btn-warning col-sm-8 col-12 col-md-5 spv" style="font-family: poppins;" onclick="buyNow('<?php echo $d['stock_id'] ?>');">Buy Now</button>
                             </div>
                         </div>
-
-                        <div class="d-flex justify-content-start mt-1 gap-2 col-lg-6 col-12">
-                            <label for="quantity" class="form-label mt-1"> &rarr;&nbsp;Available Stock &nbsp;: &nbsp;<?php if ($d["qty"] == 0) {
-                                                                                                                            echo ("Out Of Stock");
-                                                                                                                        } else {
-                                                                                                                            echo $d["qty"];
-                                                                                                                        } ?></label>
-                        </div>
-
-
-
-
-                        <div class="row gap-3 mt-5 d-flex justify-content-center pb-sm-5">
-                            <button class="btn btn-success col-sm-8 col-md-8 col-lg-5" onclick="addtoCart('<?php echo $d['stock_id'] ?>');">Add to Cart</button>
-                            <button class="btn btn-warning col-sm-8 col-md-8 col-lg-5" onclick="buyNow('<?php echo $d['stock_id'] ?>');">Buy Now</button>
-                        </div>
-
-
                     </div>
                 </div>
             </div>
-
-
-
         </div>
 
 

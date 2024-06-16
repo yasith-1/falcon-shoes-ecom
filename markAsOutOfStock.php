@@ -22,9 +22,9 @@ $num = $rs->num_rows;
     <?php include "adminNavBar.php"; ?>
 
     <div class="container " style="margin-top: 100px;">
-        <h2 class="text-center mb-4">Change Stock Status</h2>
+        <h2 class="text-center mb-4" style="font-family: poppins;">Change Stock Status</h2>
         <div class="table-responsive">
-            <table class="table table-hover table-bordered text-center table-group-divider">
+            <table class="table table-hover table-bordered text-center table-group-divider mt-4">
                 <thead class="table-striped table-danger">
                     <tr>
                         <th scope="col">Product Name</th>
