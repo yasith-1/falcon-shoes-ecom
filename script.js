@@ -2019,19 +2019,17 @@ function contactbtn() {
 
     var name = document.getElementById("name");
     var email = document.getElementById("email");
-    var sub = document.getElementById("sub");
     var msg = document.getElementById("msg");
 
     var form = new FormData();
     form.append("n", name.value);
     form.append("e", email.value);
-    form.append("s", sub.value);
     form.append("m", msg.value);
 
     var r = new XMLHttpRequest();
 
     r.onreadystatechange = function () {
-        if (r.status == 200 & r.readyState == 4) {
+        if (r.readyState == 4 & r.status == 200) {
             var response = r.responseText;
 
             if (response == "success") {
@@ -2046,7 +2044,7 @@ function contactbtn() {
                         window.location.reload();
                     }
                 });
-            } if (response == "Update") {
+            } else if (response == "Update") {
                 Swal.fire({
                     title: "Successfully Updated Your Message",
                     text: "Got it",
@@ -2057,10 +2055,16 @@ function contactbtn() {
                         window.location.reload();
                     }
                 });
+            } else {
+                Swal.fire({
+                    title: response,
+                    text: "oops",
+                    icon: "warning"
+                })
             }
 
         }
-    }
+    };
 
     r.open("POST", "cutomerContactProcess.php", true);
     r.send(form);

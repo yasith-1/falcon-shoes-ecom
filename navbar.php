@@ -55,7 +55,7 @@ session_start();
     <nav class="navbar navbar-expand-lg py-lg-2 px-0 bg-transparent bg-body-secondary mt-5 fixed-top d-sm-flex py-sm-2">
         <div class="container-fluid">
             <a class="navbar-brand ms-lg-3" href="home.php">
-                <img src="resources/Images/orgficon.png" class="img-fluid" alt="Bootstrap" width="30" height="30">
+                <img src="resources/Images/orgficon.png" class="img-fluid spv" alt="Bootstrap" width="30" height="30">
             </a>
             <a class="navbar-brand mx-sm-5 ms-lg-3" href="home.php" style=" font-family: poppins; font-weight: bold; font-size: 26px; letter-spacing: 3px;">Falcon Shoes</a>
 

@@ -41,12 +41,12 @@ if (isset($_COOKIE["password"])) {
 
     <div class="container d-flex justify-content-center" style="margin-top: 20px;">
 
-        <div class="card mb-3 border border-3 shadow-lg rounded-4" style="height: 100%; width: fit-content;">
+        <div class="card mb-3 border border-3 shadow-lg rounded-4" >
             <div class="row g-0">
 
                 <!-- image -->
                 <div class="col-12 col-lg-6 p-3">
-                    <img src="resources/Images/collection.jpeg" class="img-fluid rounded-start rounded-4" alt="loading...">
+                    <img src="resources/Images/marketcart.jpeg" class="img-fluid rounded-start rounded-4" style="height: 100%; width: fit-content;" alt="loading...">
                 </div>
                 <!-- image -->
 

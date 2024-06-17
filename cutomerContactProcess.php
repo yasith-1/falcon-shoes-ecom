@@ -3,11 +3,10 @@ include "connection.php";
 
 $name = $_POST["n"];
 $email = $_POST["e"];
-$sub = $_POST["s"];
 $msg = $_POST["m"];
 
 if (empty($name)) {
-    echo ("Enter your Name First");
+    echo ("Enter your Name ");
 } else if (strlen($name) > 30) {
     echo ("Name must be contain 30 characters only");
 } else if (empty($email)) {
@@ -16,10 +15,6 @@ if (empty($name)) {
     echo ("Email Address Must Contain LOWER THAN 45 characters.");
 } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo ("Invalid Email Address.");
-} else if (empty($sub)) {
-    echo ("Enter Subject First");
-} else if (strlen($sub) > 45) {
-    echo ("Name must be contain 45 characters only");
 } else if (empty($msg)) {
     echo ("Type your Message ");
 } else {
@@ -31,13 +26,11 @@ if (empty($name)) {
 
     if ($num == 1) {
         // Update query
-        Database::iud("UPDATE `contact` SET `name`='$name' ,`email`='$email',`subject`='$sub',`msg`='$msg' WHERE `name`='" . $name . "' AND `email`='" . $email . "'");
+        Database::iud("UPDATE `contact` SET `name`='" . $name . "' ,`email`='" . $email . "',`msg`='" . $msg . "' WHERE `email`='" . $email . "'");
         echo ("Update");
     } else {
         //Insert query
-        Database::iud("INSERT INTO `contact` (`name`,`email`,`subject`,`msg`) VALUES ('" . $name . "','" . $email . "','" . $sub . "','" . $msg . "')");
+        Database::iud("INSERT INTO `contact` (`name`,`email`,`msg`) VALUES ('" . $name . "','" . $email . "','" . $msg . "')");
         echo ("success");
     }
 }
-
-?>

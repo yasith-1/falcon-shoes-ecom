@@ -38,8 +38,20 @@ if (isset($stockId)) {
         <?php include "navbar.php"; ?>
 
 
-        <div class="container" style="margin-top: 140px;">
-            <div class="card mb-3 bg-body-tertiary rounded-4 px-3 spvbg">
+        <div class="container" style="margin-top: 40px;">
+
+            <!-- Bread crumb -->
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="home.php">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><?php echo $d["name"] ?></li>
+                </ol>
+            </nav>
+            <!-- Bread crumb -->
+
+
+
+            <div class="card mt-5 mb-3 bg-body-tertiary rounded-4 px-3 spvbg">
                 <div class="row g-0">
                     <div class="col-12 col-lg-6 p-4 d-flex flex-column">
                         <img src="<?php echo $d["path"] ?>" class="img-fluid rounded-4 shadow-lg spv" height="90%" alt="...">
@@ -92,33 +104,33 @@ if (isset($stockId)) {
 
                             <p class="mb-3 mt-3 "> &rarr;&nbsp;Description :&nbsp;<?php echo $d["description"] ?> </p>
 
-                            <div class="d-flex justify-content-start flex-row mt-3 gap-2 ">
-                                <label for="qty" class="form-label mt-1"> &rarr;&nbsp;Quantity &nbsp;: &nbsp;</label>
-                                <div>
-                                    <input type="text" class="form-control " id="qty" placeholder="Enter quantity" min="1">
-                                </div>
-                            </div>
 
                             <?php
                             if ($d["qty"] == 0) {
                                 // out of stock
                             ?>
                                 <div class="d-flex justify-content-start mt-3 gap-2 col-lg-6 col-12">
-                                    <label for="quantity" class="form-label mt-1"> &rarr;&nbsp;Available Stock :&nbsp;&nbsp;<span class="badge text-bg-danger"><?php echo ("Out OF Stock") ?></span></label>
+                                    <label for="quantity" class="form-label mt-1"> &rarr;&nbsp;Available Stock :&nbsp;&nbsp;<span class="badge w-auto text-bg-danger"><?php echo ("Out OF Stock") ?></span></label>
                                 </div>
                             <?php
                             } else {
                                 // In stock
                             ?>
                                 <div class="d-flex justify-content-start mt-3 gap-2 col-lg-6 col-12">
-                                    <label for="quantity" class="form-label mt-1"> &rarr;&nbsp;Available Stock :&nbsp;&nbsp;<span class="badge text-bg-danger"><?php echo $d["qty"] ?></span></label>
+                                    <label for="quantity" class="form-label mt-1"> &rarr;&nbsp;Available Stock :&nbsp;&nbsp;<span class="badge w-auto text-bg-danger"><?php echo $d["qty"] ?></span></label>
                                 </div>
                             <?php
                             }
 
 
                             ?>
-
+                            
+                            <div class="d-flex justify-content-start flex-row mt-3 gap-2 ">
+                                <label for="qty" class="form-label mt-1"> &rarr;&nbsp;Add Quantity &nbsp;: &nbsp;</label>
+                                <div>
+                                    <input type="text" class="form-control w-50 text-center rounded-4 border-secondary" id="qty" placeholder="Qty" min="1">
+                                </div>
+                            </div>
 
 
 

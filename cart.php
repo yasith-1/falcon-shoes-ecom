@@ -24,15 +24,16 @@ if (isset($_SESSION["u"])) {
         <title>Falcon Shoes Cart</title>
     </head>
 
-    <body onload="loadCart(); cartalertnavbar();">
-        <!-- navbar  -->
-        <?php include "navbar.php"; ?>
-        <!-- navbar  -->
+    <body class="d-flex justify-content-center align-items-center min-vh-100" onload="loadCart(); cartalertnavbar();">
+
 
 
         <div class="container-fluid">
 
-            <div class="row px-5" id="cartBody" style="margin-top: 50px; ">
+
+            
+
+            <div class="row px-5" id="cartBody" style="margin-top: 0px; ">
                 <!-- cart load here -->
 
 

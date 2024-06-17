@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="resources/Images/orgficon.png" type="image/x-icon">
     <title>Falcon Shoes | Contact</title>
-    <link rel="icon" href="resources/Images/falcon.png" />
+    <link rel="shortcut icon" href="resources/Images/orgficon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
@@ -65,7 +65,7 @@
 
         <div class="row mt-5">
             <div class="col-md-6 contact-info text-light d-flex flex-column justify-content-center">
-                <h3>Our Contact Information</h3>
+                <h3>Contact Info :</h3>
                 <div class="mt-4">
                     <p><strong>Address &nbsp;:</strong><span class="text-info"> No.64,Nathuduwa,kelaniya ,Sri Lanka</span></p>
                     <p><strong>Phone &nbsp;:</strong><span class="text-info"> +94 701410113 | +94 751887145</span></p>
@@ -83,15 +83,15 @@
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control text-center" id="email" placeholder="Your Email">
                 </div>
-                <div class="mb-3">
-                    <label for="subject" class="form-label">Subject</label>
-                    <input type="text" class="form-control text-center" id="sub" placeholder="Subject">
-                </div>
+
                 <div class="mb-3">
                     <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="msg" rows="4" placeholder="Your Message"></textarea>
+                    <textarea class="form-control" id="msg" rows="4" placeholder="Type Your Message"></textarea>
                 </div>
-                <button class="btn btn-warning w-100" onclick="contactbtn();">Send Message</button>
+
+                <div class="text-center">
+                    <button class="btn btn-warning w-75 spv spvbg" style="font-family: poppins;" onclick="contactbtn();">Send Message</button>
+                </div>
 
             </div>
         </div>
@@ -109,7 +109,6 @@
     <!-- Bootstrap JS and dependencies -->
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
