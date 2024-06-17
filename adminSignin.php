@@ -56,24 +56,24 @@ if (isset($_COOKIE["password"])) {
                         <h2 class="card-title text-center" style="font-family: poppins; letter-spacing: 2px;">ADMIN LOGIN</h2>
 
 
-                        <div class="col-11" style="margin-top: 70px;">
+                        <div class="col-12" style="margin-top: 70px;">
                             <label class="form-label " style="font-family: poppins;font-size: 15px;">&nbsp;<i class="fa-solid fa-file-signature"></i>&nbsp;&nbsp; Email </label>
                             <input type="email" class="form-control rounded-4 border-secondary" id="aemail" value="<?php echo $email  ?> ">
                         </div>
 
-                        <div class="mt-4 col-11">
+                        <div class="mt-4 col-12">
                             <label class="form-label" style="font-family: poppins; font-size: 15px;">&nbsp;<i class="fa-solid fa-lock"></i>&nbsp;&nbsp; Password </label>
                             <input type="password" class="form-control rounded-4 border-secondary" id="apw" value="<?php echo $password ?>">
                         </div>
 
-                        <div class="mt-4 col-11">
+                        <div class="mt-4 col-12">
                             <input type="checkbox" class="form-check-input border-secondary" id="arm" /> &nbsp;
                             <label for="form-label ">Remember Me</label>
                         </div>
 
                         <!-- Sign in button -->
                         <div class="mt-5 col-11 px-5 ">
-                            <button type="button" class="btn btn-warning col-12" onclick="adminSignin();">Sign In &nbsp;&nbsp;<i class="fa-solid fa-right-to-bracket"></i>
+                            <button type="button" class="btn btn-warning col-12 spv spvbg" onclick="adminSignin();">Sign In &nbsp;&nbsp;<i class="fa-solid fa-right-to-bracket"></i>
                             &nbsp;&nbsp; <span class="spinner-border text-dark spinner-border-sm d-none" id="spinner" aria-hidden="true"></span></button>
                         </div>
                         <!-- Sign in button -->

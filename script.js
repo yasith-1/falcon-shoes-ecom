@@ -2154,7 +2154,7 @@ function loadchart2() {
             var data = JSON.parse(response);
 
             new Chart(ctx, {
-                type: 'pie',
+                type: 'doughnut',
                 data: {
                     labels: data.labels,
                     datasets: [{

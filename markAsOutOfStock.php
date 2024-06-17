@@ -13,7 +13,8 @@ $num = $rs->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <title>Stock Status</title>
+    <link rel="shortcut icon" href="resources/Images/orgficon.png" type="image/x-icon">
+    <title>Falcon Shoes</title>
 
 </head>
 
@@ -24,8 +25,8 @@ $num = $rs->num_rows;
     <div class="container " style="margin-top: 100px;">
         <h2 class="text-center mb-4" style="font-family: poppins;">Change Stock Status</h2>
         <div class="table-responsive">
-            <table class="table table-hover table-bordered text-center table-group-divider mt-4">
-                <thead class="table-striped table-danger">
+            <table class="table table-hover table-bordered text-center table-group-divider table-dark mt-4">
+                <thead class="table-striped" style="font-family: poppins;">
                     <tr>
                         <th scope="col">Product Name</th>
                         <th scope="col">Price Rs.</th>
@@ -34,7 +35,7 @@ $num = $rs->num_rows;
                         <th scope="col">Mark as out of stock</th>
                     </tr>
                 </thead>
-                <tbody >
+                <tbody>
                     <?php
                     for ($i = 0; $i < $num; $i++) {
                         $d = $rs->fetch_assoc();
@@ -44,7 +45,7 @@ $num = $rs->num_rows;
                             <td><?php echo $d["price"]; ?></td>
                             <td><?php echo $d["qty"]; ?></td>
                             <td><img src="<?php echo $d["path"]; ?>" width="150px" class="img-thumbnail img-fluid" alt="Product Image"></td>
-                            <td><button class="btn btn-outline-danger border-warning text-light mt-3" id="ststatus" onclick="markAsOutOfStock(<?php echo $d['stock_id'] ?>);">Mark as Out of Stock</button></td>
+                            <td><button class="btn btn-outline-warning border-warning btn-sm mt-3 spv spvbg" id="ststatus" style="font-family: poppins;" onclick="markAsOutOfStock(<?php echo $d['stock_id'] ?>);">Mark as Out of Stock</button></td>
                         </tr>
                     <?php
                     }
