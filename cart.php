@@ -30,10 +30,7 @@ if (isset($_SESSION["u"])) {
 
         <div class="container-fluid">
 
-
-            
-
-            <div class="row px-5" id="cartBody" style="margin-top: 0px; ">
+            <div class="row col-12 px-5" id="cartBody" style="margin-top: 0px; ">
                 <!-- cart load here -->
 
 

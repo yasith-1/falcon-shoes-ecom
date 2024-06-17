@@ -47,7 +47,7 @@ if ($num2 == 0) {
 ?>
         <!-- Card -->
 
-        <div class="card col-md-6 mycard " style="width: 350px">
+        <div class="card col-12 col-md-3 mycard rounded-4" style="width: 350px">
             <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>"><img src=" <?php echo $d["path"] ?> " class="card-img-top mt-3 pcardimg" alt="..." style="height: 280px;" /></a>
 
             <div class="card-body">

@@ -119,25 +119,27 @@ if (isset($stockId)) {
                                 <div class="d-flex justify-content-start mt-3 gap-2 col-lg-6 col-12">
                                     <label for="quantity" class="form-label mt-1"> &rarr;&nbsp;Available Stock :&nbsp;&nbsp;<span class="badge w-auto text-bg-danger"><?php echo $d["qty"] ?></span></label>
                                 </div>
+
+                                <div class="d-flex justify-content-start flex-row mt-3 gap-2 ">
+                                    <label for="qty" class="form-label mt-1"> &rarr;&nbsp;Add Quantity &nbsp;: &nbsp;</label>
+                                    <div>
+                                        <input type="text" class="form-control w-50 text-center rounded-4 border-secondary" id="qty" placeholder="Qty" min="1">
+                                    </div>
+                                </div>
+
+
+                                <div class="row g-2 gap-4 mt-5 d-flex justify-content-center pb-sm-2">
+                                    <button class="btn btn-success col-sm-8 col-12 col-md-5 spv" style="font-family: poppins;" onclick="addtoCart('<?php echo $d['stock_id'] ?>');">Add to Cart</button>
+                                    <button class="btn btn-warning col-sm-8 col-12 col-md-5 spv" style="font-family: poppins;" onclick="buyNow('<?php echo $d['stock_id'] ?>');">Buy Now</button>
+                                </div>
+
                             <?php
                             }
 
 
                             ?>
-                            
-                            <div class="d-flex justify-content-start flex-row mt-3 gap-2 ">
-                                <label for="qty" class="form-label mt-1"> &rarr;&nbsp;Add Quantity &nbsp;: &nbsp;</label>
-                                <div>
-                                    <input type="text" class="form-control w-50 text-center rounded-4 border-secondary" id="qty" placeholder="Qty" min="1">
-                                </div>
-                            </div>
 
 
-
-                            <div class="row g-2 gap-4 mt-5 d-flex justify-content-center pb-sm-2">
-                                <button class="btn btn-success col-sm-8 col-12 col-md-5 spv" style="font-family: poppins;" onclick="addtoCart('<?php echo $d['stock_id'] ?>');">Add to Cart</button>
-                                <button class="btn btn-warning col-sm-8 col-12 col-md-5 spv" style="font-family: poppins;" onclick="buyNow('<?php echo $d['stock_id'] ?>');">Buy Now</button>
-                            </div>
                         </div>
                     </div>
                 </div>

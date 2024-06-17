@@ -46,7 +46,7 @@ if ($num > 0) {
             <!-- Cart Items -->
             <div class="row col-lg-10 offset-lg-1 border border-1 rounded-3 p-3 shadow-lg bg-body-tertiary justify-content-between mb-3">
                 <div class="d-flex align-items-center col-12 col-md-5">
-                    <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>"><img src="<?php echo $d["path"] ?>" alt="" class="rounded-4 shadow-lg img-fluid spv" style="max-height: 130px;"></a>
+                <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>"><img src="<?php echo $d["path"] ?>" alt="" class="rounded-4 shadow-lg img-fluid spv" style="max-height: 130px;"></a>
 
                     <div class="ms-3 ms-md-5 mt-3 mt-md-0">
                         <h5 class="text-info" style="font-family: poppins; letter-spacing: 1px;"><?php echo $d["name"] ?></h5>

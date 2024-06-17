@@ -232,22 +232,18 @@
 
 
 
-    <!-- Adavnce  Search area -->
+    <div class="container d-flex justify-content-center ">
+        <!-- Adavnce  Search button to open area -->
 
-    <div class="mb-5 col-12 d-flex justify-content-center ">
-        <button class="btn btn-outline-light col-lg-5 col-md-5 col-12" onclick="viewFilter();">Open Advance Search <i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class=" row col-12 mb-5 d-flex justify-content-center ">
+            <button class="btn btn-outline-light col-12 col-md-4" onclick="viewFilter();">Open Advance Search <i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <!-- Adavnce Search button to open area -->
     </div>
-    <!-- Adavnce Search area -->
 
 
 
-
-
-
-    <!-- products ------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-    <div class="col-10 offset-1 mt-5 mb-5">
-
+    <div class="container d-flex justify-content-center">
         <!-- Advance Search -->
         <div class="d-none " id="filterId">
             <div class="card mb-5">
@@ -368,39 +364,22 @@
 
         </div>
         <!-- Advance Search -->
-
-
-
-        <!-- Items per Page -->
-        <!-- <div class="col-10 offset-1 justify-content-center d-flex mb-5 me-lg-5 gap-3">
-            <div class="col-4 ">
-                <select class="form-select shadow-lg bg-body-tertiary bg-transparent text-center" id="itemcount">
-
-                    <option value="4">4</option>
-                    <option value="8">8</option>
-                    <option value="12">12</option>
-                </select>
-            </div>
-
-            <div>
-                <button class="btn btn-primary" onclick="countItemPerpage();">Sort</button>
-            </div>
-
-        </div> -->
-
-        <!-- Items Per Page -->
+    </div>
 
 
 
 
-        <!-- products ------------------------------------------------------------------------------------------------------------------------------->
-        <div class="row gap-5 d-flex justify-content-center align-items-center" id="pid">
+    <!-- products ------------------------------------------------------------------------------------------------------------------------------->
+    <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
 
+        <div class="row gap-5 d-flex justify-content-center " id="pid">
+
+            <!-- Products load here -->
 
         </div>
-        <!-- products ------------------------------------------------------------------------------------------------------------------------------->
 
     </div>
+    <!-- products ------------------------------------------------------------------------------------------------------------------------------->
 
 
     <hr class="border-secondary border-2">
@@ -426,8 +405,9 @@
     <!-- video clip   -->
 
 
-
+    <!-- Footer  -->
     <?php include "footer.php"; ?>
+    <!-- Footer  -->
 
     <script src="script.js"></script>
     <script src="app.js"> </script>

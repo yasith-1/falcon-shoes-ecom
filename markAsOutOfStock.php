@@ -43,9 +43,32 @@ $num = $rs->num_rows;
                         <tr class="text-light">
                             <td><?php echo $d["name"]; ?></td>
                             <td><?php echo $d["price"]; ?></td>
-                            <td><?php echo $d["qty"]; ?></td>
+                            <td><?php if ($d["qty"] == 0) {
+                                ?>
+                                    <span class="badge text-bg-danger w-auto"><?php echo $d["qty"]; ?></span>
+                                <?php
+                                } else {
+                                ?>
+                                    <span class="badge text-bg-success w-auto"><?php echo $d["qty"]; ?></span>
+                                <?php
+                                }
+                                ?>
+                            </td>
+
                             <td><img src="<?php echo $d["path"]; ?>" width="150px" class="img-thumbnail img-fluid" alt="Product Image"></td>
-                            <td><button class="btn btn-outline-warning border-warning btn-sm mt-3 spv spvbg" id="ststatus" style="font-family: poppins;" onclick="markAsOutOfStock(<?php echo $d['stock_id'] ?>);">Mark as Out of Stock</button></td>
+
+                            <td><?php if ($d["qty"] == 0) {
+                                ?>
+                                    <button class="btn btn-danger btn-sm mt-3 spv spvbg" id="ststatus" style="font-family: poppins;" onclick="markAsOutOfStock(<?php echo $d['stock_id'] ?>);">Stock Outed</button>
+                                <?php
+                                } else {
+                                ?>
+                                    <button class="btn btn-outline-warning border-warning btn-sm mt-3 spv spvbg" id="ststatus" style="font-family: poppins;" onclick="markAsOutOfStock(<?php echo $d['stock_id'] ?>);">Mark as Out of Stock</button>
+                                <?php
+                                }
+                                ?>
+                            </td>
+
                         </tr>
                     <?php
                     }
