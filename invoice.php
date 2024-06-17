@@ -43,7 +43,7 @@ if ($num > 0) {
 
 
                 <div class=" text-center pt-4 col-12">
-                    <img src="resources/Images/ficon1.png" alt="Loading...." style="width: 150px; cursor: pointer;" />
+                    <img src="resources/Images/orgficon.png" alt="Loading...." style="width: 150px; cursor: pointer;" />
                 </div>
 
 
@@ -66,23 +66,24 @@ if ($num > 0) {
                     <span class="fs-5 fw-normal" style="font-family: poppins;"><?php echo $user["mobile"] ?></span> <br>
                     <span class="fs-5 fw-normal" style="font-family: poppins;"><?php echo $user["no"] ?></span>
                     <span class="fs-5 fw-normal" style="font-family: poppins;"><?php echo $user["line_1"] ?>,
-                    <span class="fs-5 fw-normal" style="font-family: poppins;"><?php echo $user["line_2"] ?></span>
+                        <span class="fs-5 fw-normal" style="font-family: poppins;"><?php echo $user["line_2"] ?></span>
                 </div>
 
                 <div class="table-responsive mt-5 ">
-                    <table class="table table-bordered border-1 table-group-divider table-hover text-center table-secondary ">
-                        <thead >
+                    <table class="table table-bordered border-1 table-group-divider table-hover table-secondary ">
+                        <thead>
                             <tr>
                                 <th scope="col" class="text-dark">Product Name</th>
                                 <th scope="col" class="text-dark">Brand Name</th>
                                 <th scope="col" class="text-dark">Category</th>
                                 <th scope="col" class="text-dark">Color</th>
                                 <th scope="col" class="text-dark">Size</th>
+                                <th scope="col" class="text-dark">Unit Price</th>
                                 <th scope="col" class="text-dark">Qty</th>
                                 <th scope="col" class="text-dark">Price</th>
                             </tr>
                         </thead>
-                        <tbody class="table-success">
+                        <tbody class="table-light">
                             <?php
                             $rs2 = Database::search("SELECT * FROM `order_item` INNER JOIN  `stock` ON `order_item`.`stock_stock_id`=`stock`.`stock_id` 
                             INNER JOIN `product` ON `stock`.product_id =`product`.`id` INNER JOIN `brand` ON `product`.`brand_id` = `brand`.`brand_id` 
@@ -101,11 +102,18 @@ if ($num > 0) {
                                     <td class="text-dark"><?php echo $d2["cat_name"] ?></td>
                                     <td class="text-dark"><?php echo $d2["color_name"] ?></td>
                                     <td class="text-dark"><?php echo $d2["size_name"] ?></td>
+                                    <td class="text-dark"><?php echo $d2["price"] ?></td>
                                     <td class="text-dark"><?php echo $d2["oid_qty"] ?></td>
                                     <td class="text-dark">Rs.<?php echo ($d2["price"] * $d2["oid_qty"]) ?></td>
                                 </tr>
                             <?php
                             }
+                            ?>
+                            <tr>
+                                <td colspan="7" class="text-center fw-semibold text-primary">Total Amount</td>
+                                <td class="text-primary fw-semibold">Rs.<?php echo $d["amount"] - 450 ?>/=</td>
+                            </tr>
+                            <?php
                             ?>
                         </tbody>
                     </table>
@@ -123,7 +131,7 @@ if ($num > 0) {
 
 
             <div class="text-center mt-4 mb-4">
-                <button class="btn btn-success text-light col-md-6 py-2 rounded-3 " onclick="orderInvoicePrint();">Print Invoice &nbsp;<i class="fa-solid fa-print fa-lg" style="color: #ffffff;"></i></button>
+                <button class="btn btn-warning col-12 col-md-3 py-2 rounded-3 spv spvbg" onclick="orderInvoicePrint();">Print Invoice &nbsp;<i class="fa-solid fa-print fa-lg" style="color: #ffffff;"></i></button>
             </div>
         </div>
 

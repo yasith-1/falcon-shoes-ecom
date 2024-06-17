@@ -163,11 +163,14 @@ a {
 }
 .carousel .list .item .author {
   font-weight: bold;
-  letter-spacing: 10px;
+  color: rgb(12, 44, 226);
+  font-family: poppins;
+  letter-spacing: 5px;
 }
 .carousel .list .item .title,
 .carousel .list .item .topic {
   font-size: 5em;
+  font-family: poppins;
   font-weight: bold;
   line-height: 1.3em;
 }
@@ -427,7 +430,7 @@ a {
 }
 
 .mycontent::after {
-  background-color: black;
+  color: black;
   padding: 20px;
   filter: blur(5px);
   opacity: 0.5;
@@ -625,10 +628,10 @@ a {
 .micon:hover {
   -webkit-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);
-  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.747);
-  background: rgba(255, 251, 28, 0.815);
+  /* box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.747); */
+  /* background: rgba(235, 156, 10, 0.678); */
   border-radius: 20px;
-  color: black;
+  /* color: black; */
   padding: 10px;
 }
 
@@ -674,6 +677,17 @@ a {
 }
 
 /* spv background */
+
+
+
+/* mid icon background */
+.micospvbg:hover{
+  box-shadow: 0 0 10px 0 rgba(231, 231, 231, 0.459);
+
+}
+/* mid icon background */
+
+
 
 
 /* Product Card img effect */

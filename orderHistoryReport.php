@@ -15,6 +15,8 @@
 
 <body>
 
+
+
     <div class="container text-start mt-3">
         <a href="orderHistory.php" class="text-decoration-none text-info">
             <img src="resources/Images/back.png" alt="Loading...." style="width: 25px; cursor: pointer;" />
@@ -27,16 +29,20 @@
     <div class="container mt-3 mb-4" data-bs-theme="light">
 
 
-        <div class="border border-secondary border-3 bg-custom shadow-custom px-5 py-1 rounded-4 bg-body-tertiary" id="invoiceId"></div>
+        <div class="border border-secondary border-3 bg-custom shadow-custom px-5 py-1 rounded-4 bg-body-tertiary" id="invoiceId">
+            <!-- Report load here -->
+        </div>
 
         <div class="text-center mt-4 mb-4">
             <button class="btn btn-warning col-12 col-md-3 py-2 rounded-3 spv spvbg" style="font-family: poppins;" onclick="genorderhistory();">Print Invoice &nbsp;<i class="fa-solid fa-print fa-lg" style="color: #000000;"></i></button>
         </div>
 
-
     </div>
 
+
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

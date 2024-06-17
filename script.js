@@ -2294,9 +2294,9 @@ function ginvoice(id) {
             // alert(response);
             invoice.innerHTML = response;
             body.classList.add("d-none");
-            hide.className="d-block";
+            hide.className = "d-block";
 
-    
+
         }
     };
 
@@ -2321,3 +2321,6 @@ function genorderhistory() {
 }
 
 // print order history invoice report
+
+
+

@@ -1,5 +1,27 @@
+<?php
+
+session_start();
+
+$email = "";
+$password = "";
+
+if (isset($_COOKIE["email"])) {
+
+    $email = $_COOKIE["email"];
+}
+
+if (isset($_COOKIE["password"])) {
+
+    $password = $_COOKIE["password"];
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -13,75 +35,65 @@
     <title>Falcon Shoes</title>
 </head>
 
-<body class="adminSigninBody">
-
-    <div class="col-lg-10 col-sm-12 col-md-12 bg-transparent px-2 ">
-        <div class="row">
-
-            <div class="col-5  text-center backgroundImage d-lg-block d-none ">
-
-            </div>
-
-
-            <div class="col-lg-7 col-md-12 d-flex align-items-center justify-content-center border border-start-0 border-secondary" style=" box-shadow: 0px 0px 15px 1px rgba(70, 70, 70, 0.301);">
-
-
-                <div class="row">
-
-                    <div class="col-10 offset-1 text-center mb-3">
-                        <h3 class="text-light" style="font-family: poppins; font-size: 35px; font-weight: 500;">ADMIN LOG IN</h3>
-                    </div>
-
-                    <?php
-
-                    session_start();
-
-                    $email = "";
-                    $password = "";
-
-                    if (isset($_COOKIE["email"])) {
-
-                        $email = $_COOKIE["email"];
-                    }
-
-                    if (isset($_COOKIE["password"])) {
-
-                        $password = $_COOKIE["password"];
-                    }
+<body class="d-flex justify-content-center align-items-center min-vh-100 adminSigninBody">
 
 
 
-                    ?>
+    <div class="container d-flex justify-content-center" style="margin-top: 20px;">
 
-                    <div class="col-10 offset-1 mt-5 px-5 bg-transparent">
-                        <label class="form-label inputfont text-light" style="font-family: poppins;font-size: 17px;">&nbsp;<i class="fa-solid fa-file-signature"></i>&nbsp;&nbsp; Email </label>
-                        <input type="email" class="form-control bg-transparent text-light" id="aemail" value="<?php echo $email  ?> ">
-                    </div>
+        <div class="card mb-3 border border-3 shadow-lg rounded-4" style="height: 100%; width: fit-content;">
+            <div class="row g-0">
 
-                    <div class="col-10 offset-1 mt-5 mb-5 px-5 bg-transparent">
-                        <label class="form-label inputfont text-light" style="font-family: poppins; font-size: 17px;">&nbsp;<i class="fa-solid fa-lock"></i>&nbsp;&nbsp; Password </label>
-                        <input type="password" class="form-control bg-transparent text-light" id="apw" value="<?php echo $password ?>">
-                    </div>
+                <!-- image -->
+                <div class="col-12 col-lg-6 p-3">
+                    <img src="resources/Images/collection.jpeg" class="img-fluid rounded-start rounded-4" alt="loading...">
+                </div>
+                <!-- image -->
 
-                    <div class="col-10 offset-1  mb-3 px-5 bg-transparent">
-                        <input type="checkbox" class="form-check-input bg-transparent border-light maininputfield" id="arm" /> &nbsp;
-                        <label for="form-label" class="inputfont text-light">Remember Me</label>
-                    </div>
-
-                    <!-- <div class="col-5  mb-3 px-5 bg-transparent">
-                        <a href="" class="inputfont text-primary " style="text-decoration: underline; text-underline-offset: 5px;">Forgotten Password ?</a>
-                    </div> -->
+                <!-- Form -->
+                <div class="col-12 col-md-12 col-lg-6 p-5 pt-2">
+                    <div class="card-body g-4">
+                        <h2 class="card-title text-center" style="font-family: poppins; letter-spacing: 2px;">ADMIN LOGIN</h2>
 
 
-                    <div class="mt-5 mb-5 px-5 col-8 offset-2">
-                        <button type="button" class="btn btn-success col-12 text-light" onclick="adminSignin();"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp; Sign In  &nbsp;&nbsp;
-                        <span class="spinner-border  spinner-border-sm d-none" id="spinner" aria-hidden="true" ></span></button>
-                        
+                        <div class="col-11" style="margin-top: 70px;">
+                            <label class="form-label " style="font-family: poppins;font-size: 15px;">&nbsp;<i class="fa-solid fa-file-signature"></i>&nbsp;&nbsp; Email </label>
+                            <input type="email" class="form-control rounded-4 border-secondary" id="aemail" value="<?php echo $email  ?> ">
+                        </div>
+
+                        <div class="mt-4 col-11">
+                            <label class="form-label" style="font-family: poppins; font-size: 15px;">&nbsp;<i class="fa-solid fa-lock"></i>&nbsp;&nbsp; Password </label>
+                            <input type="password" class="form-control rounded-4 border-secondary" id="apw" value="<?php echo $password ?>">
+                        </div>
+
+                        <div class="mt-4 col-11">
+                            <input type="checkbox" class="form-check-input border-secondary" id="arm" /> &nbsp;
+                            <label for="form-label ">Remember Me</label>
+                        </div>
+
+                        <!-- Sign in button -->
+                        <div class="mt-5 col-11 px-5 ">
+                            <button type="button" class="btn btn-warning col-12" onclick="adminSignin();">Sign In &nbsp;&nbsp;<i class="fa-solid fa-right-to-bracket"></i>
+                            &nbsp;&nbsp; <span class="spinner-border text-dark spinner-border-sm d-none" id="spinner" aria-hidden="true"></span></button>
+                        </div>
+                        <!-- Sign in button -->
+
+
                     </div>
                 </div>
             </div>
+            <!-- Form -->
+
         </div>
+
     </div>
+
+
+
+
+
+
+
 
 
 

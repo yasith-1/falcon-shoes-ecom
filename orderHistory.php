@@ -22,9 +22,9 @@ if (isset($user)) {
     </head>
 
     <body class="min-vh-100" onload="cartalertnavbar();">
-        <!-- Nav Bar -->
 
-        <!-- Nav Bar -->
+
+
 
         <div class="container mt-2 " id="ohisbody">
             <div class="row justify-content-center">
@@ -40,7 +40,7 @@ if (isset($user)) {
                             &nbsp;Home
                         </a></span>
 
-                    <div class="col-12 text-center mt-5 mb-3">
+                    <div class="col-12 text-center mt-3 mb-3">
 
                         <h3 style="font-family: poppins;">Order History</h3>
                     </div>
@@ -86,19 +86,17 @@ if (isset($user)) {
                                 </table>
                             </div>
 
-
-
-                            <div class="text-start">
-                                <button class="btn btn-outline-warning btn-sm" style="font-family: poppins;" onclick="ginvoice('<?php echo $d['ohid'] ?>');">Genarate Invoice </button> &nbsp;&nbsp;
-                                <span class="mt-3"><i class="fa-solid fa-print" style="color: #ffffff;"></i></span>
-                            </div>
-
                             <div class="d-flex flex-column align-items-end pe-3">
                                 <h6 class="text-muted" style="font-family: poppins;">Delivery Fee &nbsp;: <span class="text-muted">450/=</span></h6>
                                 <div class="mt-2">
-                                    <h4 style="font-family: poppins;">Net Amount &nbsp;: <span class="text-warning"><?php echo $d["amount"]; ?>/=</span></h4>
+                                    <h5 style="font-family: poppins;">Net Amount &nbsp;: <span class="text-warning">Rs.<?php echo $d["amount"]; ?>/=</span></h5>
                                 </div>
                             </div>
+
+                            <div class="text-start">
+                                <button class="btn btn-outline-warning btn-sm" style="font-family: poppins;" onclick="ginvoice('<?php echo $d['ohid'] ?>');">Genarate Invoice </button> &nbsp;&nbsp;
+                            </div>
+
                         </div>
                         <!-- order history card -->
                     <?php
@@ -119,13 +117,11 @@ if (isset($user)) {
         </div>
 
 
-
-
+        <!-- oreder hitory report -->
         <div class="d-none" id="hideId">
             <?php include "orderHistoryReport.php"; ?>
         </div>
-
-
+        <!-- oreder hitory report -->
 
 
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->

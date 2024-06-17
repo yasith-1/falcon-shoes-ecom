@@ -33,7 +33,7 @@
                     <div class="item">
                         <img src="image/img1.jpeg" />
                         <div class="content mycontent">
-                            <div class="author">@YASITH PRABASHWRA</div>
+                            <div class="author">@Contact Admin : Yasith.. </div>
                             <div class="title">FALCON SHOES</div>
                             <div class="topic">Vietnam Shoes</div>
                             <div class="des">
@@ -49,7 +49,7 @@
                     <div class="item ">
                         <img src="image/img2.jpeg" />
                         <div class="content">
-                            <!-- <div class="author">@YASITH PRABASHWRA</div> -->
+                            <div class="author">@Contact Admin : Yasith.. </div>
                             <div class="title">FALCON SHOES</div>
                             <div class="topic">Vietnam Import</div>
                             <div class="des">
@@ -64,7 +64,7 @@
                     <div class="item">
                         <img src="image/img3.jpeg" />
                         <div class="content">
-                            <div class="author">@YASITH PRABASHWRA</div>
+                            <div class="author">@Contact Admin : Yasith.. </div>
                             <div class="title">FALCON SHOES</div>
                             <div class="topic">Vietnam Import</div>
                             <div class="des">
@@ -79,7 +79,7 @@
                     <div class="item">
                         <img src="image/img4.jpeg" />
                         <div class="content">
-                            <div class="author">@YASITH PRABASHWRA</div>
+                            <div class="author">@Contact Admin : Yasith.. </div>
                             <div class="title">FALCON SHOES</div>
                             <div class="topic">Vietnam Import</div>
                             <div class="des">
@@ -95,7 +95,7 @@
                     <div class="item">
                         <img src="image/img5.jpeg" />
                         <div class="content">
-                            <div class="author">@YASITH PRABASHWRA</div>
+                            <div class="author">@Contact Admin : Yasith.. </div>
                             <div class="title">FALCON SHOES</div>
                             <div class="topic">Vietnam Import</div>
                             <div class="des">
@@ -111,7 +111,7 @@
                     <div class="item">
                         <img src="image/img6.jpeg" />
                         <div class="content">
-                            <div class="author">@YASITH PRABASHWRA</div>
+                            <div class="author">@Contact Admin : Yasith.. </div>
                             <div class="title">FALCON SHOES</div>
                             <div class="topic">Vietnam Import</div>
                             <div class="des">
@@ -197,26 +197,26 @@
     <div class="col-10 offset-1 " style="margin-top: 100px; margin-bottom: 100px;">
         <div class="row">
 
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2 micon">
-                <img src="resources/Images/delivery.png" alt="loading...">
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2 micospvbg">
+                <img src="resources/Images/delivery.png" alt="loading..." class="micon">
                 <h5 class="mt-1">Fast Delivery</h5>
                 <p>Island wide Fast Delivery </p>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2 micon">
-                <img src="resources/Images/payment.png" alt="loading...">
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2 micospvbg">
+                <img src="resources/Images/payment.png" alt="loading..." class="micon">
                 <h5 class="mt-1">Secure Payment</h5>
                 <p>shop with confidence, every time, everywhere</p>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2 micon">
-                <img src="resources/Images/cod.png" alt="loading...">
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2 micospvbg">
+                <img src="resources/Images/cod.png" alt="loading..." class="micon">
                 <h5 class="mt-1">COD Accepted</h5>
                 <p>Pay us easily at your doorstep</p>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2 micon">
-                <img src="resources/Images/exchanging.png" alt="loading...">
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-sm-2 micospvbg">
+                <img src="resources/Images/exchanging.png" alt="loading..." class="micon">
                 <h5 class="mt-1">14 days Return Accept</h5>
                 <p>love it or swap it. Your satisfaction, guaranteed </p>
             </div>
@@ -403,13 +403,19 @@
     </div>
 
 
+    <hr class="border-secondary border-2">
+
+    <div class="d-flex justify-content-center mt-5">
+        <h2 style="font-family: poppins;" class="micon">&#129505&nbsp; WELCOME SHOE LOVERS ! &nbsp;&#129505</h2>
+    </div>
+
     <!-- video clip   -->
 
-    <div class="d-flex justify-content-center">
-        <div class="row col-8  row-cols-1 row-cols-sm-2 row-cols-md-6 ">
-            <div class="ratio ratio-4x3">
-                <video controls autoplay muted>
-                    <source src="resources/Images/shoesvideo.mp4" type="video/mp4">
+    <div class="d-flex justify-content-center ">
+        <div class="row col-7 col-md-6 border-secondary rounded-3 shadow-lg">
+            <div class="ratio ratio-16x9">
+                <video autoplay muted loop>
+                    <source src="resources/videoclips/shoe_lover.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>

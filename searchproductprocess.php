@@ -37,7 +37,7 @@ if ($num2 == 0) {
 
 ?>
     <div class="d-flex align-items-center flex-column mt-5">
-        <h5>Search No Results</h5>
+        <h5> No Search Results Found...</h5>
         <p>We're Sorry , We cannot find any matches for your search term...</p>
         <div>
             <img src="resources/Images/sad.png" alt="loading..." width="90px">

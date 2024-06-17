@@ -12,13 +12,13 @@ $d = $rs->fetch_assoc();
 ?>
 
 <div class=" text-center pt-4 col-12">
-    <img src="resources/Images/ficon1.png" alt="Loading...." style="width: 150px; cursor: pointer;" />
+    <img src="resources/Images/orgficon.png" alt="Loading...." style="width: 150px; cursor: pointer;" />
 </div>
 
 
 <div class="row">
-    <div class="col-md-6 mt-lg-1 mt-5 text-lg-start text-center">
-        <h4 class="text-dark">Order ID : <span class="text-success">&nbsp;#<?php echo $d["order_id"] ?></span></h4>
+    <div class="col-md-6 mt-lg-1 mt-5 text-start ">
+        <h5 class="text-dark">Order ID : <span class="text-success">&nbsp;#<?php echo $d["order_id"] ?></span></h5>
         <h5 class="text-dark">Date :&nbsp;<span class="text-success"><?php echo $d["order_date"] ?> </span></h5>
     </div>
 
@@ -35,11 +35,11 @@ $d = $rs->fetch_assoc();
     <span class="text-dark fs-5 fw-normal" style="font-family: poppins;"><?php echo $user["mobile"] ?></span> <br>
     <span class="text-dark fs-5 fw-normal" style="font-family: poppins;"><?php echo $user["no"] ?></span>
     <span class="text-dark fs-5 fw-normal" style="font-family: poppins;"><?php echo $user["line_1"] ?>
-    <span class="text-dark fs-5 fw-normal" style="font-family: poppins;"><?php echo $user["line_2"] ?></span>
+        <span class="text-dark fs-5 fw-normal" style="font-family: poppins;"><?php echo $user["line_2"] ?></span>
 </div>
 
 <div class="table-responsive mt-5 ">
-    <table class="table table-bordered border-1 table-group-divider table-hover text-center table-secondary ">
+    <table class="table table-hover table-bordered table-group-divider table-secondary ">
         <thead>
             <tr>
                 <th scope="col" class="text-dark">Product Name</th>
@@ -47,11 +47,12 @@ $d = $rs->fetch_assoc();
                 <th scope="col" class="text-dark">Category</th>
                 <th scope="col" class="text-dark">Color</th>
                 <th scope="col" class="text-dark">Size</th>
+                <th scope="col" class="text-dark">Unit Price</th>
                 <th scope="col" class="text-dark">Qty</th>
                 <th scope="col" class="text-dark">Price</th>
             </tr>
         </thead>
-        <tbody class="table-success">
+        <tbody class="table-light">
             <?php
             $rs2 = Database::search("SELECT * FROM `order_item` INNER JOIN  `stock` ON `order_item`.`stock_stock_id`=`stock`.`stock_id` 
                             INNER JOIN `product` ON `stock`.product_id =`product`.`id` INNER JOIN `brand` ON `product`.`brand_id` = `brand`.`brand_id` 
@@ -70,11 +71,20 @@ $d = $rs->fetch_assoc();
                     <td class="text-dark"><?php echo $d2["cat_name"] ?></td>
                     <td class="text-dark"><?php echo $d2["color_name"] ?></td>
                     <td class="text-dark"><?php echo $d2["size_name"] ?></td>
+                    <td class="text-dark"><?php echo $d2["price"] ?></td>
                     <td class="text-dark"><?php echo $d2["oid_qty"] ?></td>
                     <td class="text-dark">Rs.<?php echo ($d2["price"] * $d2["oid_qty"]) ?></td>
+
                 </tr>
             <?php
             }
+
+            ?>
+            <tr>
+                <td colspan="7" class="text-center fw-semibold text-primary">Total Amount</td>
+                <td class="text-primary fw-semibold">Rs.<?php echo $d["amount"] - 450 ?>/=</td>
+            </tr>
+            <?php
             ?>
         </tbody>
     </table>
