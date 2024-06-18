@@ -21,7 +21,7 @@ if (isset($_SESSION["a"])) {
         <?php include "adminNavBar.php"; ?>
         <!-- Nav bar -->
 
-        <div class="container " style="margin-top: 80px;">
+        <div class="container " style="margin-top: 70px;">
             <div class="row justify-content-center">
                 <!-- <div class="col-12 text-center mb-4">
                     <h2 style="font-family: poppins;">Product Management</h2>

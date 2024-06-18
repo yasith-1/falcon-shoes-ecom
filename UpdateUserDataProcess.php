@@ -13,7 +13,6 @@ $no = $_POST["no"];
 $line1 = $_POST["l1"];
 $line2 = $_POST["l2"];
 $city = $_POST["city"];
-$pcode = $_POST["pc"];
 
 
 if (empty($fname)) {
@@ -38,7 +37,7 @@ if (empty($fname)) {
     echo ("Invalid Mobile Number.");
 } else if (empty($password)) {
     echo ("Please Enter Your Password.");
-} else if (strlen($password) < 5 || strlen($password) > 20) {
+} else if (strlen($password) < 5 || strlen($password) > 100) {
     echo ("Password Must Contain 5 to 20 Characters.");
 } else if (empty($no)) {
     echo ("please Enter Your Address No");

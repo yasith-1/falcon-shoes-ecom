@@ -23,28 +23,33 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto  d-flex flex-lg-grow-1 justify-content-center align-items-center gap-lg-5 gap-md-3">
+                    
                     <li class="nav-item ">
-                        <a class="nav-link adminnavbarhov text-light" style="font-family: poppins;" aria-current="page" href="adminUser.php">User Management</a>
+                        <a class="nav-link adminspv rounded-4 text-light" style="font-family: poppins;" aria-current="page" href="adminUser.php">User Management</a>
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link adminnavbarhov text-light" style="font-family: poppins;" aria-current="page" href="adminProduct.php">Product Management</a>
+                        <a class="nav-link adminspv rounded-4 text-light" style="font-family: poppins;" aria-current="page" href="adminProduct.php">Product Management</a>
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link adminnavbarhov text-light" style="font-family: poppins;" aria-current="page" href="adminStock.php">Stock Management</a>
+                        <a class="nav-link adminspv rounded-4 text-light" style="font-family: poppins;" aria-current="page" href="adminStock.php">Stock Management</a>
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link adminnavbarhov text-light" style="font-family: poppins;" aria-current="page" href="markAsOutOfStock.php">Stock Status</a>
+                        <a class="nav-link adminspv rounded-4 text-light" style="font-family: poppins;" aria-current="page" href="markAsOutOfStock.php">Stock Status</a>
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link adminnavbarhov text-light" style="font-family: poppins;" aria-current="page" href="adminReport.php">Reports</a>
+                        <a class="nav-link adminspv rounded-4 text-light" style="font-family: poppins;" aria-current="page" href="countDown.php">Offers</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link adminspv rounded-4 text-light" style="font-family: poppins;" aria-current="page" href="adminReport.php">Reports</a>
                     </li>
                 </ul>
                 <div class="d-flex ms-lg-4">
-                    <button type="button" class="btn btn-light btn-outline-secondary" onclick="adminLogout();">LOG OUT &nbsp;<i class="fa-solid fa-right-from-bracket"></i></button>
+                    <button type="button" class="btn  btn-outline-warning spv btn-sm" style="font-family: poppins;" onclick="adminLogout();">LOG OUT &nbsp;<i class="fa-solid fa-right-from-bracket"></i></button>
                 </div>
             </div>
         </div>

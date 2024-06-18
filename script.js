@@ -1333,18 +1333,19 @@ function updateUserData() {
             var response = r.responseText;
             // alert(response);
 
-            if (response = "Success") {
-
+            if (response != "Success") {
                 Swal.fire({
                     title: response,
-                    text: "Success",
-                    icon: "success"
+                    text: "oops",
+                    icon: "warning"
                 });
             } else {
+                // alert(response);
+
                 Swal.fire({
-                    title: response,
-                    text: "sorry",
-                    icon: "warning"
+                    title: "User Profile Successfuly Updated !",
+                    text: "Done",
+                    icon: "success"
                 });
             }
 
@@ -1752,8 +1753,26 @@ function checkOut() {
         if (r.readyState == 4 & r.status == 200) {
             var response = r.responseText;
             // alert(response);
-            var payment = JSON.parse(response);
-            doCheckout(payment, "checkoutProcess.php");
+
+            if (response != "filladdress") {
+                var payment = JSON.parse(response);
+                doCheckout(payment, "checkoutProcess.php");
+            } else {
+                Swal.fire({
+                    title: "Fill your address details first !",
+                    text: "sorry can't be approved this checkout Request",
+                    icon: "warning",
+                    showCancelButton: true,
+                    cancelButtonColor: "#d33",
+                }).then((result) => {
+
+                    if (result.isConfirmed) {
+                        window.location.href = "userProfile.php"
+                    }
+                });
+            }
+
+
         }
     };
 
@@ -1843,10 +1862,26 @@ function buyNow(stockId) {
             if (r.readyState == 4 & r.status == 200) {
                 var response = r.responseText;
                 // alert(response);
-                var payment = JSON.parse(response);
-                payment.stock_id = stockId;
-                payment.qty = qty.value;
-                doCheckout(payment, "buynowProcess.php");
+
+                if (response != "filladdress") {
+                    var payment = JSON.parse(response);
+                    payment.stock_id = stockId;
+                    payment.qty = qty.value;
+                    doCheckout(payment, "buynowProcess.php");
+                } else {
+                    Swal.fire({
+                        title: "Fill your address details first !",
+                        text: "sorry can't be approved this checkout Request",
+                        icon: "warning",
+                        showCancelButton: true,
+                        cancelButtonColor: "#d33",
+                    }).then((result) => {
+
+                        if (result.isConfirmed) {
+                            window.location.href = "userProfile.php"
+                        }
+                    });
+                }
 
 
             }

@@ -6,8 +6,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- conunt down cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countdown/2.6.0/countdown.min.js"></script>
+    <!-- conunt down cdn  -->
+
+    <!-- Flaticon CDN  -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <!-- Flaticon CDN  -->
+
+    <!-- font awesome cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome cdn  -->
 
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
@@ -15,7 +26,7 @@
     <title>Falcon Shoes | Home</title>
 </head>
 
-<body data-bs-theme="dark" onload="loadhomeproduct(0); cartalertnavbar();">
+<body data-bs-theme="dark" onload="loadhomeproduct(0); cartalertnavbar(); reloadhome();">
 
 
 
@@ -225,7 +236,54 @@
     </div>
 
 
-    <!-- middel icons -->
+    <!-- middel icons end -->
+
+
+
+    <!-- countdown -->
+    <div class="container-fluid mt-2 mb-3 float-end">
+        <div class="row d-flex justify-content-center">
+
+
+            <div class="col-10 col-lg-3 offset-lg-8">
+                <!-- <div class="mb-3">
+                    <label for="offerEndDate" class="form-label">Set Offer End Date and Time:</label>
+                    <input type="datetime-local" class="form-control" id="offerEndDate">
+                    <button id="setOfferDate" class="btn btn-primary mt-2">Set Offer Date</button>
+                </div> -->
+
+                <div class="mb-4">
+                    <h4 class="text-center ">Hurry Up &nbsp;!&nbsp; <span class="text-warning">Offer Ends In:</span></h4>
+                </div>
+
+                <div class="countdown-container bg-danger bg-gradient text-light d-flex justify-content-evenly align-items-center flex-wrap rounded-4 py-1 px-0 spvbg" id="countdown-timer" data-offer-end-date="2024-06-18 T23:59:59">
+                    <div class="fs-6 fw-semibold">
+                        <div class="fs-5 text-center" id="days">00</div>
+                        <div>Days</div>
+                    </div>
+                    <div class="fs-6 fw-semibold">
+                        <div class="fs-5 text-center" id="hours">00</div>
+                        <div>Hours</div>
+                    </div>
+                    <div class="fs-6 fw-semibold">
+                        <div class="fs-5 text-center" id="minutes">00</div>
+                        <div>Minutes</div>
+                    </div>
+                    <div class="fs-6 fw-semibold">
+                        <div class="fs-5 text-center" id="seconds">00</div>
+                        <div>Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- countdown -->
+
+
+
+
+
+
     <hr class="border border-success mb-5">
 
 
@@ -411,6 +469,7 @@
 
     <script src="script.js"></script>
     <script src="app.js"> </script>
+    <script src="countdown.js"></script>
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->

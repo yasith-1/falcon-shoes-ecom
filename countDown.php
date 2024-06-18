@@ -4,83 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <title>count down</title>
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- conunt down cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countdown/2.6.0/countdown.min.js"></script>
+    <!-- conunt down cdn  -->
 
-    <style>
-        .countdown {
-            display: none;
-            /* Initially hide */
-            justify-content: center;
-            align-items: center;
-            font-size: 3rem;
-        }
-
-        .container {
-            padding-top: 50px;
-        }
-
-        .timer-box {
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Set Offers End Date & Time</title>
 
 </head>
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h1 class="text-center mb-4">Countdown Timer</h1>
-                <div class="timer-box">
-                    <div class="form-group">
-                        <label for="countdownDate">Set Countdown Date and Time:</label>
-                        <input type="datetime-local" class="form-control" id="countdownDate">
-                    </div>
-                    <button class="btn btn-primary mt-2 w-100" onclick="startCountdown()">Start Countdown</button>
-                    <div class="countdown mt-4" id="countdown">
-                        <span id="days">00</span> : <span id="hours">00</span> : <span id="minutes">00</span> : <span id="seconds">00</span>
-                    </div>
+<body data-bs-theme="dark" class="d-flex justify-content-center align-items-center min-vh-100">
+
+    <!-- Nav bar -->
+    <?php include "adminNavBar.php"; ?>
+    <!-- Nav bar -->
+
+    <div class="container d-flex justify-content-center">
+
+        <div class="col-12 col-lg-7 ">
+            <h2 class="text-center mb-4" style="font-family: poppins;">Set Offer Date & Time</h2>
+            <div class="border border-secondary border-2 rounded-3 p-4 bg-body-tertiary">
+                <div class="form-group">
+                    <label for="offerEndDate" class="form-label fw-bold">Set Offer End Date and Time:</label>
+                    <input type="datetime-local" class="form-control text-center " id="offerEndDate">
+                </div>
+
+                <div class="text-center mt-3">
+                    <button id="setOfferDate" class="btn btn-warning spv spvbg mt-2 " id="reloadPageButton" onclick="settimebtn();">Set Offer Date
+                        &nbsp;&nbsp; <span class="spinner-border text-dark spinner-border-sm d-none" id="spinnercountdown" aria-hidden="true"></span>
+                    </button>
                 </div>
             </div>
         </div>
+
     </div>
 
 
-
-    <script>
-        let countdownDate;
-
-        function startCountdown() {
-            countdownDate = new Date(document.getElementById("countdownDate").value).getTime();
-            document.getElementById("countdown").style.display = "flex";
-
-            let x = setInterval(function() {
-                let now = new Date().getTime();
-                let distance = countdownDate - now;
-
-                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-                document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-                document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-                document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
-
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "EXPIRED";
-                }
-            }, 1000);
-        }
-    </script>
-
-
-    <script src="path/to/simplyCountdown.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="countdown.js"></script>
 </body>
 
 </html>

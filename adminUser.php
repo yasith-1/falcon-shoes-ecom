@@ -25,7 +25,7 @@
 
     <?php include "adminNavBar.php"; ?>
 
-    <div class="container p-2" style="margin-top: 150px;">
+    <div class="container p-2" style="margin-top: 100px;">
         <div class="row border rounded-3 px-2 py-3">
 
             <div class="col-lg-3 col-md-12 d-flex flex-column align-items-center text-center mb-5 mb-lg-0 border rounded-4">

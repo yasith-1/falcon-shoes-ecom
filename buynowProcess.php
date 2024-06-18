@@ -4,6 +4,10 @@ include "connection.php";
 session_start();
 $user = $_SESSION["u"];
 
+$addrs = Database::search("SELECT * FROM `user` WHERE `user_id`='" . $user["user_id"] . "'");
+$addrsdata = $addrs->fetch_assoc();
+
+
 if (isset($_POST["payment"])) {
 
     $payment = json_decode($_POST["payment"], true);
@@ -30,7 +34,10 @@ if (isset($_POST["payment"])) {
 
     $order =  array();
     $order["resp"] = "Success";
-    $order["order_id"]=$orderHistoryId;
+    $order["order_id"] = $orderHistoryId;
 
     echo json_encode($order);
 }
+
+
+?>
