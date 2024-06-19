@@ -54,7 +54,7 @@ if (isset($stockId)) {
             <div class="card mt-5 mb-3 bg-body-tertiary rounded-4 px-3 spvbg">
                 <div class="row g-0">
                     <div class="col-12 col-lg-6 p-4 d-flex flex-column">
-                        <img src="<?php echo $d["path"] ?>" class="img-fluid rounded-4 shadow-lg spv" height="90%" alt="...">
+                        <img src="<?php echo $d["path"] ?>" class="img-fluid rounded-4 shadow-lg spv" height="90%" alt="..." id="mimgid">
 
                         <div class="text-center mt-3 product-rating ">
                             <i class="fas fa-star"></i>
@@ -142,31 +142,48 @@ if (isset($stockId)) {
 
 
                 </div>
-            </div>
 
-            <!-- Variant Images -->
-            <div class="container d-flex justify-content-center mt-4 mb-4">
+                <!-- Variant Images -->
+                <div class="container d-flex justify-content-center justify-content-lg-start mt-4 mb-4">
 
-                <div class="row justify-content-center gap-4">
+                    <div class="row justify-content- gap-4">
 
-                    <img src="resources/productimg/665c76965aadf.png" alt="" class="img-fluid img-thumbnail" style="width: 300px;">
+                        <?php
 
-
-
-                    <img src="resources/productimg/665c76965aadf.png" alt="" class="img-fluid img-thumbnail" style="width: 300px;">
-
+                        $vimgrs = Database::search("SELECT * FROM `vimage` INNER JOIN `product` ON `vimage`.`product_id` = `product`.`id` INNER JOIN `stock` ON `stock`.`product_id`=`product`.`id` WHERE `stock`.`stock_id`='" . $stockId . "'");
+                        $vimgnum = $vimgrs->num_rows;
+                        $image = array();
 
 
-                    <img src="resources/productimg/665c76965aadf.png" alt="" class="img-fluid img-thumbnail" style="width: 300px;">
+                        if (isset($stockId)) {
+
+                            for ($i = 0; $i < $vimgnum; $i++) {
+                                $vimgdata = $vimgrs->fetch_assoc();
+                                $image[$i] = $vimgdata["v_path"];
+
+                        ?>
+                                <img src="<?php echo $image[$i] ?>" alt="" class="img-fluid img-thumbnail rounded-2 border-info spv spvbg" style="width: 150px; cursor: pointer;" id="vimgid<?php echo $i; ?>" onclick="changeimages('<?php echo $i; ?>');">
+                            <?php
+                            }
+                        } else {
 
 
+                            ?>
+                            <img src="https://via.placeholder.com/200" alt="" class="img-fluid img-thumbnail" style="width: 200px;">
+                            <img src="https://via.placeholder.com/200" alt="" class="img-fluid img-thumbnail" style="width: 200px;">
+                            <img src="https://via.placeholder.com/200" alt="" class="img-fluid img-thumbnail" style="width: 200px;">
+                            <img src="https://via.placeholder.com/200" alt="" class="img-fluid img-thumbnail" style="width: 200px;">
+                        <?php
 
-                    <img src="resources/productimg/665c76965aadf.png" alt="" class="img-fluid img-thumbnail" style="width: 300px;">
+                        }
+                        ?>
 
-
+                    </div>
                 </div>
+                <!-- Variant Images -->
             </div>
-            <!-- Variant Images -->
+
+
 
         </div>
         <!-- single product view card -->

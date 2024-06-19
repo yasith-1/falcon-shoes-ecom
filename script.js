@@ -984,8 +984,25 @@ function updateStock() {
 
 
 // Add varient images
-function varientimg(){
-    
+function varientimg() {
+    // alert("ok");
+
+    var file = document.getElementById("vfile");
+
+    var form = new FormData();
+    form.append("image", file.files[0]);
+
+
+    var r = new XMLHttpRequest();
+    r.onreadystatechange = function () {
+        if (r.readyState == 4 && r.status == 200) {
+            var response = r.responseText;
+
+        }
+    }
+    r.open("POST", "varientInageAddingProcess.php", true);
+    r.send(form);
+
 }
 // Add varient images
 
@@ -2380,3 +2397,19 @@ function genorderhistory() {
 
 
 
+// change main image and variation image
+
+function changeimages(id) {
+
+    // alert(id); 
+    var vimage = document.getElementById("vimgid"+id).src;
+    var mainimage = document.getElementById("mimgid");
+
+    // alert(vimage);
+    mainimage.src = vimage;
+
+   
+
+}
+
+// change main image and variation image
