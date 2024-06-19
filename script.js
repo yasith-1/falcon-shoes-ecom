@@ -983,44 +983,6 @@ function updateStock() {
 
 
 
-// Add varient images
-function varientimg() {
-    // alert("ok");
-
-    var file = document.getElementById("vfile");
-
-    var form = new FormData();
-    form.append("image", file.files[0]);
-
-
-    var r = new XMLHttpRequest();
-    r.onreadystatechange = function () {
-        if (r.readyState == 4 && r.status == 200) {
-            var response = r.responseText;
-
-        }
-    }
-    r.open("POST", "varientInageAddingProcess.php", true);
-    r.send(form);
-
-}
-// Add varient images
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // PDF downloader
 
@@ -2413,3 +2375,28 @@ function changeimages(id) {
 }
 
 // change main image and variation image
+
+
+
+// Varient image add to database by admin
+function varientimgaddstock(){
+    // alert("ok");
+
+   var images = document.getElementById("vfile");
+
+   var form = new FormData();
+    form.append("image", images.file[0]);
+
+
+    var r = new XMLHttpRequest();
+    r.onreadystatechange = function () {
+        if (r.readyState == 4 && r.status == 200) {
+            var response = r.responseText;
+
+        }
+    }
+    r.open("POST", "varientInageAddingProcess.php", true);
+    r.send(form);
+   
+}
+// Varient image add to database by admin

@@ -54,7 +54,7 @@ if (isset($stockId)) {
             <div class="card mt-5 mb-3 bg-body-tertiary rounded-4 px-3 spvbg">
                 <div class="row g-0">
                     <div class="col-12 col-lg-6 p-4 d-flex flex-column">
-                        <img src="<?php echo $d["path"] ?>" class="img-fluid img-thumbnail border-success rounded-4 spv spvbg" height="90%" alt="..." id="mimgid">
+                        <img src="<?php echo $d["path"] ?>" class="img-fluid border-success rounded-4 spv" height="90%" alt="..." id="mimgid">
 
                         <!-- <div class="text-center mt-1 product-rating ">
                             <i class="fas fa-star"></i>

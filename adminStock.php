@@ -113,10 +113,10 @@ if (isset($_SESSION["a"])) {
 
                     <div class="mb-3 px-3">
                         <label for="file" class="form-label">Product Image</label>
-                        <input type="file" class="form-control" id="file"  />
+                        <input type="file" class="form-control" id="file" />
                     </div>
 
-                    
+
 
                     <div class="d-flex justify-content-center mb-3">
                         <button class="btn btn-warning spv" style="font-family: poppins;" onclick="regProduct();">Register Product</button>
@@ -165,18 +165,23 @@ if (isset($_SESSION["a"])) {
                     <h2 class="card-title text-center mt-5"> Add Varient Images</h2>
 
                     <div class="px-3">
-                        <label for="file" class="form-label">Add varient Image</label>
+                        <div class="d-flex justify-content-center mt-2"> 
+                            <img src="resources/Images/box.svg" for="vfile" alt="" class="w-25">
+                            <img src="resources/Images/box.svg" for="vfile" alt="" class="w-25">
+                            <img src="resources/Images/box.svg" for="vfile" alt="" class="w-25">
+                            <img src="resources/Images/box.svg" for="vfile" alt="" class="w-25">
+                        </div>
                         <input type="file" class="form-control" id="vfile" multiple />
                     </div>
 
-                    <div class="d-flex justify-content-center mt-4">
-                        <button class="btn btn-primary spv" style="font-family: poppins;" onclick="varientimg();">Add Images</button>
+                    <div class="d-flex justify-content-center mt-5">
+                        <button class="btn btn-primary spv" style="font-family: poppins;" onclick="varientimgaddstock();">Add Images</button>
                     </div>
 
                 </div>
 
 
-                
+
             </div>
         </div>
 
