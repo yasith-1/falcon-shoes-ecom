@@ -4,7 +4,7 @@ var loader = document.getElementById("loader");
 
 setTimeout(() => {
     loader.style.display = "none";
-}, 1500);
+}, 2000);
 
 
 
@@ -977,6 +977,23 @@ function updateStock() {
 }
 
 // Stock Update
+
+
+
+
+
+
+// Add varient images
+function varientimg(){
+    
+}
+// Add varient images
+
+
+
+
+
+
 
 
 

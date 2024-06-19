@@ -18,7 +18,7 @@
     <title>Falcon Shoes</title>
 </head>
 
-<body class="signInBody" data-bs-theme="dark">
+<body class="signInBody overflow-hidden" data-bs-theme="dark">
 
 
     <!-- Preloader ---------------------------------------------------------------------- -->
@@ -30,81 +30,90 @@
 
 
     <!-- <div class="row ">
-        <div class="col-12 fixed-top d-lg-flex d-none justify-content-center ">
-            <img src="resources/falcon.jpg" alt="" class="logo">
-        </div>
+        
     </div> -->
 
+    <div class="container d-flex justify-content-center align-items-center mt-5 mb-4">
+        <div class="d-flex justify-content-center ">
+            <img src="resources/Images/orgficon.png" width="20%" alt="" class="logo">
+        </div>
+    </div>
 
 
 
     <!--sign In Box--------------------------------------------------------------------------------------------------------->
-    <div class="signIn_Box mt-3 ms-3" id="signIn_Box">
-        <h2 class="text-center">SIGN IN</h2>
+    <div class="container d-flex justify-content-center mt-2 ">
+        <div class="signIn_Box bg-body-tertiary mt-3 rounded-4 bg-opacity-25 border border-1 border-bg-secondary-subtle" id="signIn_Box">
+            <h2 class="text-center">SIGN IN</h2>
 
 
-        <!-- USER COOKIE SETTING  ----------------------------------------->
+            <!-- USER COOKIE SETTING  ----------------------------------------->
 
-        <?php
+            <?php
 
-        $username = "";
-        $email = '';
-        $password = "";
+            $username = "";
+            $email = '';
+            $password = "";
 
-        if (isset($_COOKIE["username"])) {
-            $username = $_COOKIE["username"];
-        }
+            if (isset($_COOKIE["username"])) {
+                $username = $_COOKIE["username"];
+            }
 
-        if (isset($_COOKIE["email"])) {
-            $email = $_COOKIE["email"];
-        }
+            if (isset($_COOKIE["email"])) {
+                $email = $_COOKIE["email"];
+            }
 
-        if (isset($_COOKIE["password"])) {
-            $password = $_COOKIE["password"];
-        }
+            if (isset($_COOKIE["password"])) {
+                $password = $_COOKIE["password"];
+            }
 
-        ?>
+            ?>
 
-        <!-- USER COOKIE SETTING  ------------------------------------------>
-
-
+            <!-- USER COOKIE SETTING  ------------------------------------------>
 
 
-        
 
-        <div class="mt-3">
-            <label for="form-label" class="maininputfield"> &nbsp <i class="fa-solid fa-user-tie"></i> &nbsp; Email:</label>
-            <input type="email" class="form-control mt-1 inputfont bg-transparent border-light" id="useremail" value="<?php echo $email ?>" />
+
+
+
+            <div class="mt-3">
+                <label for="form-label" class="maininputfield"> &nbsp <i class="fa-solid fa-user-tie"></i> &nbsp; Email:</label>
+                <input type="email" class="form-control mt-1 inputfont bg-transparent border-secondary border border-2" id="useremail" value="<?php echo $email ?>" />
+            </div>
+
+
+            <label class="form-label mt-3 maininputfield"> &nbsp;<i class="fa-solid fa-lock"></i> &nbsp; Password </label>
+            <div class="input-group col-12">
+                <input type="password" class="form-control inputfont bg-transparent border-secondary border border-2" id="password2" value="<?php echo $password ?>">
+                <button class="btn border-secondary" type="button" onclick="showTwo();" id="buttontwo">
+                    <i class="fa-regular fa-eye"></i>
+                </button>
+            </div>
+
+
+            <div class="mt-4 ">
+                <input type="checkbox" class="form-check-input maininputfield border-secondary " id="rm" /> &nbsp;
+                <label for="form-label" class="inputfont bg-transparent ">Remember Me</label>
+            </div>
+
+            <div class="mt-3 ">
+                <span class="inputfont text-info" style="text-decoration: underline; text-underline-offset: 5px; cursor: pointer;" onclick="forgotPassword();">Forgotten Password?</span>
+            </div>
+
+
+            <div class="mt-4">
+                <button class="btn btn-warning spv col-12" onclick="signin();"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Sign In&nbsp;&nbsp;
+                    <span class="spinner-border  spinner-border-sm d-none" id="spin" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="mt-4">
+                <button class="btn btn-outline-light col-12 spv" onclick=" changeView();"> New user? Sign Up</button>
+            </div>
         </div>
 
-
-        <label class="form-label mt-3 maininputfield"> &nbsp;<i class="fa-solid fa-lock"></i> &nbsp; Password </label>
-        <div class="input-group col-12">
-            <input type="password" class="form-control inputfont bg-transparent border-light" id="password2" value="<?php echo $password ?>">
-            <button class="btn btn-outline-light" type="button" onclick="showTwo();" id="buttontwo">
-                <i class="fa-regular fa-eye"></i>
-            </button>
-        </div>
-
-
-        <div class="mt-4 ">
-            <input type="checkbox" class="form-check-input bg-transparent border-light maininputfield" id="rm" /> &nbsp;
-            <label for="form-label" class="inputfont">Remember Me</label>
-        </div>
-
-        <div class="mt-3 ">
-            <span class="inputfont text-info" style="text-decoration: underline; text-underline-offset: 5px; cursor: pointer;" onclick="forgotPassword();">Forgotten Password?</span>
-        </div>
-
-
-        <div class="mt-4">
-            <button class="btn btn-success col-12" onclick="signin();"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Sign In&nbsp;&nbsp;
-            <span class="spinner-border  spinner-border-sm d-none" id="spin" aria-hidden="true" ></span></button>
-        </div>
-
-        <div class="mt-3">
-            <button class="btn btn-outline-light col-12" onclick=" changeView();"> New user? Sign Up</button>
-        </div>
+        <u>
+            
+        </u>
     </div>
     <!--sign In Box---------------------------------------------------------------------------------------------------------->
 
@@ -117,62 +126,66 @@
 
 
     <!-- Sign Up Box -------------------------------------------------------------------------------------------------------->
+    <div class="container d-flex justify-content-center">
+        <div class="signUp_Box mt-3 ms-3 d-none" id="signUp_Box">
 
-    <div class="signUp_Box mt-5 ms-3 d-none" id="signUp_Box">
+            <h2 class="text-center">SIGN UP</h2>
 
-        <h2 class="text-center">SIGN UP</h2>
+            <div class="row">
+                <div class="mt-3 col-6">
+                    <label class="form-label maininputfield"> &nbsp <i class="fa-solid fa-user-tie"></i> &nbsp; First Name </label>
+                    <input type="text" class="form-control inputfont bg-transparent border-light" id="fname" />
+                </div>
 
-        <div class="row">
-            <div class="mt-3 col-6">
-                <label class="form-label maininputfield"> &nbsp <i class="fa-solid fa-user-tie"></i> &nbsp; First Name </label>
-                <input type="text" class="form-control inputfont bg-transparent border-light" id="fname" />
+                <div class="mt-3 col-6">
+                    <label class="form-label maininputfield">&nbsp; <i class="fa-solid fa-user-tie"></i> &nbsp; Last Name</label>
+                    <input type="text" class="form-control inputfont bg-transparent border-light" id="lname" />
+                </div>
             </div>
 
-            <div class="mt-3 col-6">
-                <label class="form-label maininputfield">&nbsp; <i class="fa-solid fa-user-tie"></i> &nbsp; Last Name</label>
-                <input type="text" class="form-control inputfont bg-transparent border-light" id="lname" />
+            <div class="mt-3">
+                <label class="form-label maininputfield"> &nbsp; <i class="fa-solid fa-envelope"></i> &nbsp; Email </label>
+                <input type="email" class="form-control inputfont bg-transparent border-light" id="email" />
             </div>
+
+            <div class="mt-3">
+                <label class="form-label maininputfield">&nbsp;<i class="fa-solid fa-phone"></i> &nbsp; Mobile </label>
+                <input type="text" class="form-control inputfont bg-transparent border-light" id="mobile" />
+            </div>
+
+            <div class="mt-3">
+                <label for="form-label" class="maininputfield">&nbsp;<i class="fa-solid fa-file-signature"></i>&nbsp;Username</label>
+                <input type="text" class="form-control mt-1 inputfont bg-transparent border-light" id="username" />
+            </div>
+
+
+            <label class="form-label mt-3 maininputfield"> &nbsp; <i class="fa-solid fa-lock"></i>&nbsp; Password </label>
+            <div class="input-group">
+                <input type="password" class="form-control inputfont  bg-transparent border-light" id="password">
+                <button class="btn btn-outline-light" onclick="showOne();" type="button" id="buttonone">
+                    <i class="fa-regular fa-eye"></i>
+                </button>
+            </div>
+
+
+            <div class="mt-3 d-none">
+                <div class="alert alert-danger"></div>
+            </div>
+
+            <div class="mt-3">
+                <button class="btn btn-success col-12" onclick="signup();"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp; Sign Up</button>
+            </div>
+
+            <div class="mt-3">
+                <button class="btn btn-outline-light col-12" onclick=" changeView();">Already Have an Account? Please Sign In &nbsp;<i class="fa-solid fa-arrow-right-long"></i>&nbsp;</button>
+            </div>
+
         </div>
-
-        <div class="mt-3">
-            <label class="form-label maininputfield"> &nbsp; <i class="fa-solid fa-envelope"></i> &nbsp; Email </label>
-            <input type="email" class="form-control inputfont bg-transparent border-light" id="email" />
-        </div>
-
-        <div class="mt-3">
-            <label class="form-label maininputfield">&nbsp;<i class="fa-solid fa-phone"></i> &nbsp; Mobile </label>
-            <input type="text" class="form-control inputfont bg-transparent border-light" id="mobile" />
-        </div>
-
-        <div class="mt-3">
-            <label for="form-label" class="maininputfield">&nbsp;<i class="fa-solid fa-file-signature"></i>&nbsp;Username</label>
-            <input type="text" class="form-control mt-1 inputfont bg-transparent border-light" id="username" />
-        </div>
-
-
-        <label class="form-label mt-3 maininputfield"> &nbsp; <i class="fa-solid fa-lock"></i>&nbsp; Password </label>
-        <div class="input-group">
-            <input type="password" class="form-control inputfont  bg-transparent border-light" id="password">
-            <button class="btn btn-outline-light" onclick="showOne();" type="button" id="buttonone">
-                <i class="fa-regular fa-eye"></i>
-            </button>
-        </div>
-
-
-        <div class="mt-3 d-none">
-            <div class="alert alert-danger"></div>
-        </div>
-
-        <div class="mt-3">
-            <button class="btn btn-success col-12" onclick="signup();"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp; Sign Up</button>
-        </div>
-
-        <div class="mt-3">
-            <button class="btn btn-outline-light col-12" onclick=" changeView();">Already Have an Account? Please Sign In &nbsp;<i class="fa-solid fa-arrow-right-long"></i>&nbsp;</button>
-        </div>
-
+        <!-- Sign Up Box ----------------------------------------------------------------------------------------------------->
     </div>
-    <!-- Sign Up Box ----------------------------------------------------------------------------------------------------->
+    <!-- Sign Up Box -------------------------------------------------------------------------------------------------------->
+
+
 
 
 

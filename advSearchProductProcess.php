@@ -182,8 +182,10 @@ if ($num2 == 0) {
                 if ($d["qty"] > 0) {
                 ?>
                     <div class="row gap-2 d-flex justify-content-center align-items-center mt-4">
-                        <!-- <a href="#" class="btn btn-primary col-5" >Add cart &nbsp; <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a> -->
-                        <!-- <a href="#" class="btn btn-success col-5">Buy Now &nbsp; <i class="fa-regular fa-credit-card" style="color: #ffffff;"></i></a> -->
+                        <div class="row gap-3 justify-content-center">
+                            <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>" class="btn btn-success spv col-5">Buy Now &nbsp; <i class="fa-regular fa-credit-card" style="color: #ffffff;"></i></a>
+                            <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>" class="btn btn-warning spv col-5">Add cart &nbsp; <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
+                        </div>
                         <!-- <a href="#" class="btn btn-danger col-10">Add to watchlist &nbsp; <i class="fa-solid fa-heart" style="color: #ffffff;"></i></a> -->
                         <span class="border border-secondary rounded-4 text-center text-warning fw-bold fs-6 col-12 mt-3 py-2" id="stockStatus">In Stock</span>
                         <!-- <span class="badge bg-success text-center col-12 mt-3 py-2" id="stockStatus">Available Quantity :&nbsp;<?php echo $d["qty"] ?></span> -->

@@ -32,7 +32,7 @@ if (isset($stockId)) {
         </style>
     </head>
 
-    <body class="d-flex justify-content-center align-items-center min-vh-100" onload="cartalertnavbar();">
+    <body class="d-flex justify-content-center" onload="cartalertnavbar();">
 
 
         <?php include "navbar.php"; ?>
@@ -50,7 +50,7 @@ if (isset($stockId)) {
             <!-- Bread crumb -->
 
 
-
+            <!-- single product view card -->
             <div class="card mt-5 mb-3 bg-body-tertiary rounded-4 px-3 spvbg">
                 <div class="row g-0">
                     <div class="col-12 col-lg-6 p-4 d-flex flex-column">
@@ -132,19 +132,45 @@ if (isset($stockId)) {
                                     <button class="btn btn-success col-sm-8 col-12 col-md-5 spv" style="font-family: poppins;" onclick="addtoCart('<?php echo $d['stock_id'] ?>');">Add to Cart</button>
                                     <button class="btn btn-warning col-sm-8 col-12 col-md-5 spv" style="font-family: poppins;" onclick="buyNow('<?php echo $d['stock_id'] ?>');">Buy Now</button>
                                 </div>
-
                             <?php
                             }
-
-
                             ?>
-
-
                         </div>
                     </div>
+
+
+
+
                 </div>
             </div>
+
+            <!-- Variant Images -->
+            <div class="container d-flex justify-content-center mt-4 mb-4">
+
+                <div class="row justify-content-center gap-4">
+
+                    <img src="resources/productimg/665c76965aadf.png" alt="" class="img-fluid img-thumbnail" style="width: 300px;">
+
+
+
+                    <img src="resources/productimg/665c76965aadf.png" alt="" class="img-fluid img-thumbnail" style="width: 300px;">
+
+
+
+                    <img src="resources/productimg/665c76965aadf.png" alt="" class="img-fluid img-thumbnail" style="width: 300px;">
+
+
+
+                    <img src="resources/productimg/665c76965aadf.png" alt="" class="img-fluid img-thumbnail" style="width: 300px;">
+
+
+                </div>
+            </div>
+            <!-- Variant Images -->
+
         </div>
+        <!-- single product view card -->
+
 
 
 

@@ -108,16 +108,18 @@ if (isset($_SESSION["a"])) {
 
                     <div class="mb-3 px-3">
                         <label for="desc" class="form-label">Description</label>
-                        <textarea class="form-control" rows="3" id="desc"></textarea>
+                        <textarea class="form-control" rows="2" id="desc"></textarea>
                     </div>
 
                     <div class="mb-3 px-3">
                         <label for="file" class="form-label">Product Image</label>
-                        <input type="file" class="form-control" id="file" multiple />
+                        <input type="file" class="form-control" id="file"  />
                     </div>
 
+                    
+
                     <div class="d-flex justify-content-center mb-3">
-                        <button class="btn btn-success" onclick="regProduct();">Register Product</button>
+                        <button class="btn btn-warning spv" style="font-family: poppins;" onclick="regProduct();">Register Product</button>
                     </div>
 
 
@@ -156,7 +158,19 @@ if (isset($_SESSION["a"])) {
                     </div>
 
                     <div class="d-flex justify-content-center mb-3">
-                        <button class="btn btn-success" onclick="updateStock();">Update Stock</button>
+                        <button class="btn btn-warning spv" style="font-family: poppins;" onclick="updateStock();">Update Stock</button>
+                    </div>
+
+                    <!-- Varient image adding -->
+                    <h2 class="card-title text-center mt-5"> Add Varient Images</h2>
+
+                    <div class="px-3">
+                        <label for="file" class="form-label">Add varient Image</label>
+                        <input type="file" class="form-control" id="vfile" multiple />
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-4">
+                        <button class="btn btn-primary spv" style="font-family: poppins;" onclick="varientimg();">Add Images</button>
                     </div>
 
                 </div>
