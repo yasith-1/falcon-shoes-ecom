@@ -665,6 +665,12 @@ a {
   /* box-shadow: 0 0 20px 0 rgba(238, 255, 0, 0.397); */
 }
 
+.vspv:hover {
+  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.15, 1.15);
+  /* box-shadow: 0 0 10px 0 rgba(197, 197, 197, 0.541); */
+}
+
 .adminspv:hover {
   -webkit-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);

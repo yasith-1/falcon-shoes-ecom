@@ -54,16 +54,16 @@ if (isset($stockId)) {
             <div class="card mt-5 mb-3 bg-body-tertiary rounded-4 px-3 spvbg">
                 <div class="row g-0">
                     <div class="col-12 col-lg-6 p-4 d-flex flex-column">
-                        <img src="<?php echo $d["path"] ?>" class="img-fluid rounded-4 shadow-lg spv" height="90%" alt="..." id="mimgid">
+                        <img src="<?php echo $d["path"] ?>" class="img-fluid img-thumbnail border-success rounded-4 spv spvbg" height="90%" alt="..." id="mimgid">
 
-                        <div class="text-center mt-3 product-rating ">
+                        <!-- <div class="text-center mt-1 product-rating ">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                             <span>4.7(21)</span>
-                        </div>
+                        </div> -->
                     </div>
 
 
@@ -146,7 +146,7 @@ if (isset($stockId)) {
                 <!-- Variant Images -->
                 <div class="container d-flex justify-content-center justify-content-lg-start mt-4 mb-4">
 
-                    <div class="row justify-content- gap-4">
+                    <div class="row justify-content-center gap-4 px-4">
 
                         <?php
 
@@ -162,7 +162,7 @@ if (isset($stockId)) {
                                 $image[$i] = $vimgdata["v_path"];
 
                         ?>
-                                <img src="<?php echo $image[$i] ?>" alt="" class="img-fluid img-thumbnail rounded-2 border-info spv spvbg" style="width: 150px; cursor: pointer;" id="vimgid<?php echo $i; ?>" onclick="changeimages('<?php echo $i; ?>');">
+                                <img src="<?php echo $image[$i] ?>" alt="" class="img-fluid  rounded-4 border-secondary vspv " style="width: 130px; cursor: pointer;" id="vimgid<?php echo $i; ?>" onclick="changeimages('<?php echo $i; ?>');">
                             <?php
                             }
                         } else {
