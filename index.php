@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -18,32 +18,39 @@
     <title>Falcon Shoes</title>
 </head>
 
-<body class="signInBody overflow-hidden" data-bs-theme="dark">
+<body class="signInBody overflow-hidden loaderbg" >
 
 
     <!-- Preloader ---------------------------------------------------------------------- -->
     <div id="loader">
-        <img src="resources/loader.gif" alt="Loading..." class="loader">
+        <img src="resources/Images/myloader.gif" alt="Loading..." class="loader">
     </div>
 
     <!-- Preloader ---------------------------------------------------------------------- -->
 
 
-    <!-- <div class="row ">
-        
+
+
+
+    <!-- falconshoes logo -->
+
+    <!-- <div class="d-flex justify-content-center ">
+        <img src="resources/Images/orgficon.png" alt="" style="width: 100px;">
     </div> -->
 
-    <div class="container d-flex justify-content-center align-items-center mt-5 mb-4">
-        <div class="d-flex justify-content-center ">
-            <img src="resources/Images/orgficon.png" width="20%" alt="" class="logo">
-        </div>
-    </div>
+    <!-- falconshoes logo -->
 
 
 
-    <!--sign In Box--------------------------------------------------------------------------------------------------------->
-    <div class="container d-flex justify-content-center mt-2 ">
-        <div class="signIn_Box bg-body-tertiary mt-3 rounded-4 bg-opacity-25 border border-1 border-bg-secondary-subtle" id="signIn_Box">
+
+
+
+
+
+    <div class="container d-flex justify-content-center align-items-center vh-100 mt-2 ">
+
+        <!--sign In Box--------------------------------------------------------------------------------------------------------->
+        <div class="signIn_Box bg-body-tertiary mt-3 rounded-4 bg-opacity-25 border border-1 border-bg-light-subtle" id="signIn_Box">
             <h2 class="text-center">SIGN IN</h2>
 
 
@@ -78,26 +85,26 @@
 
             <div class="mt-3">
                 <label for="form-label" class="maininputfield"> &nbsp <i class="fa-solid fa-user-tie"></i> &nbsp; Email:</label>
-                <input type="email" class="form-control mt-1 inputfont bg-transparent border-secondary border border-2" id="useremail" value="<?php echo $email ?>" />
+                <input type="email" class="form-control mt-1 inputfont bg-transparent border-light border border-2 rounded-4" id="useremail" value="<?php echo $email ?>" />
             </div>
 
 
             <label class="form-label mt-3 maininputfield"> &nbsp;<i class="fa-solid fa-lock"></i> &nbsp; Password </label>
             <div class="input-group col-12">
-                <input type="password" class="form-control inputfont bg-transparent border-secondary border border-2" id="password2" value="<?php echo $password ?>">
-                <button class="btn border-secondary" type="button" onclick="showTwo();" id="buttontwo">
+                <input type="password" class="form-control inputfont bg-transparent border-light border border-2 rounded-start-4" id="password2" value="<?php echo $password ?>">
+                <button class="btn border-light border-2 rounded-end-4" type="button" onclick="showTwo();" id="buttontwo">
                     <i class="fa-regular fa-eye"></i>
                 </button>
             </div>
 
 
             <div class="mt-4 ">
-                <input type="checkbox" class="form-check-input maininputfield border-secondary " id="rm" /> &nbsp;
+                <input type="checkbox" class="form-check-input maininputfield border-light " id="rm" /> &nbsp;
                 <label for="form-label" class="inputfont bg-transparent ">Remember Me</label>
             </div>
 
             <div class="mt-3 ">
-                <span class="inputfont text-info" style="text-decoration: underline; text-underline-offset: 5px; cursor: pointer;" onclick="forgotPassword();">Forgotten Password?</span>
+                <span class="inputfont text-info spv" style="text-decoration: underline; text-underline-offset: 5px; cursor: pointer;" onclick="forgotPassword();">Forgotten Password ?</span>
             </div>
 
 
@@ -107,15 +114,10 @@
             </div>
 
             <div class="mt-4">
-                <button class="btn btn-outline-light col-12 spv" onclick=" changeView();"> New user? Sign Up</button>
+                <button class="btn btn-outline-light col-12 spv" onclick=" changeView();"> New user? Sign Up &nbsp;<i class="fa-solid fa-arrow-right-long"></i>&nbsp;</button>
             </div>
         </div>
-
-        <u>
-            
-        </u>
-    </div>
-    <!--sign In Box---------------------------------------------------------------------------------------------------------->
+        <!--sign In Box---------------------------------------------------------------------------------------------------------->
 
 
 
@@ -125,9 +127,13 @@
 
 
 
-    <!-- Sign Up Box -------------------------------------------------------------------------------------------------------->
-    <div class="container d-flex justify-content-center">
-        <div class="signUp_Box mt-3 ms-3 d-none" id="signUp_Box">
+
+
+
+
+
+        <!-- Sign Up Box ------------------------------------------------------------------------------------------------------------------>
+        <div class="signUp_Box mt-3 ms-3 bg-body-tertiary bg-opacity-25 border border-1 border-bg-secondary-subtle d-none" id="signUp_Box">
 
             <h2 class="text-center">SIGN UP</h2>
 
@@ -173,17 +179,19 @@
             </div>
 
             <div class="mt-3">
-                <button class="btn btn-success col-12" onclick="signup();"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp; Sign Up</button>
+                <button class="btn btn-warning spv col-12" onclick="signup();"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp; Sign Up</button>
             </div>
 
             <div class="mt-3">
-                <button class="btn btn-outline-light col-12" onclick=" changeView();">Already Have an Account? Please Sign In &nbsp;<i class="fa-solid fa-arrow-right-long"></i>&nbsp;</button>
+                <button class="btn btn-outline-light spv col-12" onclick=" changeView();">Already Have an Account ? Sign In &nbsp;<i class="fa-solid fa-arrow-right-long"></i>&nbsp;</button>
             </div>
 
         </div>
-        <!-- Sign Up Box ----------------------------------------------------------------------------------------------------->
+
+        <!-- Sign Up Box ------------------------------------------------------------------------------------------------------------------>
+
     </div>
-    <!-- Sign Up Box -------------------------------------------------------------------------------------------------------->
+
 
 
 
@@ -191,11 +199,11 @@
 
     <!-- modal -->
     <div class="modal" tabindex="-1" id="fpmodal">
-        <div class="modal-dialog">
-            <div class="modal-content bg-body-tertiary">
-                <div class="modal-header text-center text-bg-warning">
-                    <h5 class="modal-title r">Forgot Password</h5>
-                    <button type="button" class="btn-close border-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog float-md-end me-4">
+            <div class="modal-content">
+                <div class="modal-header text-center bg-warning">
+                    <h5 class="modal-title text-center text-dark">Reset Password</h5>
+                    <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
 

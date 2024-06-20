@@ -241,7 +241,7 @@
 
 
     <!-- countdown -->
-    <div class="container-fluid mt-2 mb-3 float-end">
+    <div class="container-fluid mb-3 float-end">
         <div class="row d-flex justify-content-center">
 
 

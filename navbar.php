@@ -93,8 +93,8 @@ session_start();
 
                 <!-- cart  -->
                 <div class="d-flex flex-lg-grow-1 justify-content-center align-items-center mt-4 mt-lg-0">
-                    <a href="cart.php"><img src="resources/Images/cart.svg" alt="loading..." style="cursor: pointer;"></a>
-                    <span class="ms-3 mb-2 top-0 start-100 translate-middle badge rounded-pill bg-danger d-block" id="alertnavbar"></span>
+                    <a href="cart.php"><img src="resources/Images/cart.svg" class="img-fluid cspv" alt="loading..." style="cursor: pointer;"></a>
+                    <span class="ms-3 mb-2 top-0 start-100 translate-middle badge rounded-pill bg-danger cspv d-block" id="alertnavbar"></span>
                 </div>
                 <!-- cart  -->
 
@@ -111,8 +111,19 @@ session_start();
                         <li><a class="dropdown-item" href="orderHistory.php">Order History</a></li>
                         <li><a class="dropdown-item" href="aboutus.php">About Us</a></li>
                         <li><a class="dropdown-item" href="contactus.php">Contact Us</a></li>
-                        <!-- <li><a class="dropdown-item" href="invoice.php">Purchase History</a></li> -->
-                        <li><a class="dropdown-item" href="#" onclick="signout();">LOG OUT</a></li>
+
+                        <?php
+                        if (isset($_SESSION["u"])) {
+                            $guy = $_SESSION["u"];
+                            if ($guy["user_type_id"] == 1) {
+                        ?>
+                                <li><a class="dropdown-item" href="adminDashboard.php">Admin Panel</a></li>
+                        <?php
+                            }
+                        }
+                        ?>
+                        <li><a class="dropdown-item text-danger fw-bold spv" style="font-family: poppins;" href="#" onclick="signout();">Log Out</a></li>
+
                     </ul>
                 </div>
                 <!-- Dropdown -->

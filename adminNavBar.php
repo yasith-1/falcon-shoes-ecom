@@ -47,6 +47,10 @@
                     <li class="nav-item ">
                         <a class="nav-link adminspv rounded-4 text-light" style="font-family: poppins;" aria-current="page" href="adminReport.php">Reports</a>
                     </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link adminspv rounded-4 text-light" style="font-family: poppins;" aria-current="page" href="home.php">Home</a>
+                    </li>
                 </ul>
                 <div class="d-flex ms-lg-4">
                     <button type="button" class="btn  btn-outline-warning spv btn-sm" style="font-family: poppins;" onclick="adminLogout();">LOG OUT &nbsp;<i class="fa-solid fa-right-from-bracket"></i></button>
