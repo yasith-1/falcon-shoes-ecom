@@ -18,7 +18,6 @@
   z-index: 999991;
 }
 
-
 /* preloader ---------------------------------------------------*/
 
 .signIn_Box {
@@ -716,3 +715,9 @@ a {
 }
 
 /* Product Card img effect */
+
+/* admin sign social icon colors */
+.bicon:hover {
+  color: rgb(19, 216, 12);
+}
+/* admin sign social icon colors */

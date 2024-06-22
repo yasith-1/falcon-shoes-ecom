@@ -51,7 +51,7 @@
 
         <!--sign In Box--------------------------------------------------------------------------------------------------------->
         <div class="signIn_Box bg-body-tertiary mt-3 rounded-4 bg-opacity-25 border border-1 border-bg-light-subtle" id="signIn_Box">
-            <h2 class="text-center">SIGN IN</h2>
+            <h2 class="text-center" style="letter-spacing: 1px;">Login</h2>
 
 
             <!-- USER COOKIE SETTING  ----------------------------------------->
@@ -85,14 +85,14 @@
 
             <div class="mt-3">
                 <label for="form-label" class="maininputfield"> &nbsp <i class="fa-solid fa-user-tie"></i> &nbsp; Email:</label>
-                <input type="email" class="form-control mt-1 inputfont bg-transparent border-light border border-2 rounded-4" id="useremail" value="<?php echo $email ?>" />
+                <input type="email" class="form-control mt-1 inputfont bg-transparent border-light border rounded-5" id="useremail" value="<?php echo $email ?>" />
             </div>
 
 
             <label class="form-label mt-3 maininputfield"> &nbsp;<i class="fa-solid fa-lock"></i> &nbsp; Password </label>
             <div class="input-group col-12">
-                <input type="password" class="form-control inputfont bg-transparent border-light border border-2 rounded-start-4" id="password2" value="<?php echo $password ?>">
-                <button class="btn border-light border-2 rounded-end-4" type="button" onclick="showTwo();" id="buttontwo">
+                <input type="password" class="form-control inputfont bg-transparent border-light border rounded-start-5" id="password2" value="<?php echo $password ?>">
+                <button class="btn border-light rounded-end-4" type="button" onclick="showTwo();" id="buttontwo">
                     <i class="fa-regular fa-eye"></i>
                 </button>
             </div>
@@ -135,40 +135,40 @@
         <!-- Sign Up Box ------------------------------------------------------------------------------------------------------------------>
         <div class="signUp_Box mt-3 ms-3 bg-body-tertiary bg-opacity-25 border border-1 border-bg-secondary-subtle d-none" id="signUp_Box">
 
-            <h2 class="text-center">SIGN UP</h2>
+            <h2 class="text-center" style="letter-spacing: 1px;" >Register</h2>
 
             <div class="row">
                 <div class="mt-3 col-6">
                     <label class="form-label maininputfield"> &nbsp <i class="fa-solid fa-user-tie"></i> &nbsp; First Name </label>
-                    <input type="text" class="form-control inputfont bg-transparent border-light" id="fname" />
+                    <input type="text" class="form-control inputfont bg-transparent border-light rounded-5" id="fname" />
                 </div>
 
                 <div class="mt-3 col-6">
                     <label class="form-label maininputfield">&nbsp; <i class="fa-solid fa-user-tie"></i> &nbsp; Last Name</label>
-                    <input type="text" class="form-control inputfont bg-transparent border-light" id="lname" />
+                    <input type="text" class="form-control inputfont bg-transparent border-light rounded-5" id="lname" />
                 </div>
             </div>
 
             <div class="mt-3">
                 <label class="form-label maininputfield"> &nbsp; <i class="fa-solid fa-envelope"></i> &nbsp; Email </label>
-                <input type="email" class="form-control inputfont bg-transparent border-light" id="email" />
+                <input type="email" class="form-control inputfont bg-transparent border-light rounded-5" id="email" />
             </div>
 
             <div class="mt-3">
                 <label class="form-label maininputfield">&nbsp;<i class="fa-solid fa-phone"></i> &nbsp; Mobile </label>
-                <input type="text" class="form-control inputfont bg-transparent border-light" id="mobile" />
+                <input type="text" class="form-control inputfont bg-transparent border-light rounded-5" id="mobile" />
             </div>
 
             <div class="mt-3">
                 <label for="form-label" class="maininputfield">&nbsp;<i class="fa-solid fa-file-signature"></i>&nbsp;Username</label>
-                <input type="text" class="form-control mt-1 inputfont bg-transparent border-light" id="username" />
+                <input type="text" class="form-control mt-1 inputfont bg-transparent border-light rounded-5" id="username" />
             </div>
 
 
             <label class="form-label mt-3 maininputfield"> &nbsp; <i class="fa-solid fa-lock"></i>&nbsp; Password </label>
             <div class="input-group">
-                <input type="password" class="form-control inputfont  bg-transparent border-light" id="password">
-                <button class="btn btn-outline-light" onclick="showOne();" type="button" id="buttonone">
+                <input type="password" class="form-control inputfont  bg-transparent border-light rounded-start-5" id="password">
+                <button class="btn btn-outline-light rounded-end-5" onclick="showOne();" type="button" id="buttonone">
                     <i class="fa-regular fa-eye"></i>
                 </button>
             </div>
