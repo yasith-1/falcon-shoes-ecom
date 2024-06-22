@@ -18,7 +18,7 @@
     <title>Falcon Shoes</title>
 </head>
 
-<body class="signInBody overflow-hidden loaderbg" >
+<body class="signInBody overflow-hidden loaderbg">
 
 
     <!-- Preloader ---------------------------------------------------------------------- -->
@@ -116,6 +116,26 @@
             <div class="mt-4">
                 <button class="btn btn-outline-light col-12 spv" onclick=" changeView();"> New user? Sign Up &nbsp;<i class="fa-solid fa-arrow-right-long"></i>&nbsp;</button>
             </div>
+
+            <!-- social links -->
+            <div class=" d-flex justify-content-center " style="margin-top: 60px;">
+                <ul class="d-flex flex-row gap-5" style="list-style: none;">
+                    <a href="https://www.facebook.com/profile.php?id=61556478444616" class="text-light" target="_blank">
+                        <li class="vspv"><i class="bi bi-facebook h4 bicon"></i></li>
+                    </a>
+                    <a href="" class="text-light" target="_blank">
+                        <li class="vspv"><i class="bi bi-instagram h4 bicon"></i></li>
+                    </a>
+                    <a href="" class="text-light" target="_blank">
+                        <li class="vspv"><i class="bi bi-whatsapp h4 bicon"></i></li>
+                    </a>
+                    <a href="" class="text-light" target="_blank">
+                        <li class="vspv"><i class="bi bi-github h4 bicon"></i></li>
+                    </a>
+                </ul>
+            </div>
+            <!-- social links -->
+
         </div>
         <!--sign In Box---------------------------------------------------------------------------------------------------------->
 
@@ -135,7 +155,7 @@
         <!-- Sign Up Box ------------------------------------------------------------------------------------------------------------------>
         <div class="signUp_Box mt-3 ms-3 bg-body-tertiary bg-opacity-25 border border-1 border-bg-secondary-subtle d-none" id="signUp_Box">
 
-            <h2 class="text-center" style="letter-spacing: 1px;" >Register</h2>
+            <h2 class="text-center" style="letter-spacing: 1px;">Register</h2>
 
             <div class="row">
                 <div class="mt-3 col-6">
@@ -185,6 +205,28 @@
             <div class="mt-3">
                 <button class="btn btn-outline-light spv col-12" onclick=" changeView();">Already Have an Account ? Sign In &nbsp;<i class="fa-solid fa-arrow-right-long"></i>&nbsp;</button>
             </div>
+
+
+            <!-- social links -->
+            <div class=" d-flex justify-content-center " style="margin-top: 60px;">
+                <ul class="d-flex flex-row gap-5" style="list-style: none;">
+                    <a href="https://www.facebook.com/profile.php?id=61556478444616" class="text-light" target="_blank">
+                        <li class="vspv"><i class="bi bi-facebook h4 bicon"></i></li>
+                    </a>
+                    <a href="" class="text-light" target="_blank">
+                        <li class="vspv"><i class="bi bi-instagram h4 bicon"></i></li>
+                    </a>
+                    <a href="" class="text-light" target="_blank">
+                        <li class="vspv"><i class="bi bi-whatsapp h4 bicon"></i></li>
+                    </a>
+                    <a href="" class="text-light" target="_blank">
+                        <li class="vspv"><i class="bi bi-github h4 bicon"></i></li>
+                    </a>
+                </ul>
+            </div>
+            <!-- social links -->
+
+
 
         </div>
 
