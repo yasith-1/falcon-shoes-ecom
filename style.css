@@ -721,3 +721,11 @@ a {
   color: rgb(19, 216, 12);
 }
 /* admin sign social icon colors */
+
+
+
+.drop:hover{
+
+  color: #f5bc42;
+  border: 1px solid  #f5bc42;
+}

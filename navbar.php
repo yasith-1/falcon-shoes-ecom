@@ -101,10 +101,10 @@ session_start();
 
                 <!-- Dropdown -->
                 <div class="dropdown d-flex justify-content-center align-items-center mt-4 mt-lg-0 me-3">
-                    <button class="btn btn-secondary bg-body-tertiary dropdown-toggle" style="font-family: poppins;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-black bg-transparent border-1  dropdown-toggle drop" style="font-family: poppins;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         My Account
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu ">
                         <li><a class="dropdown-item" href="home.php">Home</a></li>
                         <li><a class="dropdown-item" href="userProfile.php">User Profile</a></li>
                         <li><a class="dropdown-item" href="cart.php">Cart</a></li>

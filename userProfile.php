@@ -1,12 +1,10 @@
 <?php
 include "connection.php";
 session_start();
-$user = $_SESSION["u"];
-
-
 
 if (isset($_SESSION["u"])) {
 
+    $user = $_SESSION["u"];
     $rs = Database::search("SELECT * FROM `user` WHERE `user_id`='" . $user["user_id"] . "'");
     // $rs = Database::search("SELECT * FROM `user` INNER JOIN `address` ON `user`.`user_id`=`address`.`user_user_id` WHERE `user`.`user_id`='" . $user["user_id"] . "'");
     $d = $rs->fetch_assoc();
