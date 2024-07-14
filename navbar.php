@@ -117,7 +117,7 @@ session_start();
                             $guy = $_SESSION["u"];
                             if ($guy["user_type_id"] == 1) {
                         ?>
-                                <li><a class="dropdown-item" href="adminDashboard.php">Admin Panel</a></li>
+                                <li><a class="dropdown-item" href="adminDashboard.php" target="_blank">Admin Panel</a></li>
                         <?php
                             }
                         }

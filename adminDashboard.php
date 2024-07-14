@@ -13,7 +13,7 @@ if (isset($_SESSION["a"])) {
         <link rel="stylesheet" href="bootstrap.css">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="resources/Images/orgficon.png" type="image/x-icon">
-        <title>Falcon Shoes</title>
+        <title>Admin Falcon Shoes</title>
     </head>
 
     <body onload="loadChart1(); loadchart2(); loadchart3()" class="adminDashBoardBody">
