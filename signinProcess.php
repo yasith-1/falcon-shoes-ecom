@@ -36,13 +36,10 @@ if (empty($email)) {
 
             if ($rememberme == "true") {
                 // Set cookie
-
-                // setcookie("username", $username, time() + (60 * 60 * 24 * 365));
                 setcookie("email", $email, time() + (60 * 60 * 24 * 365));
                 setcookie("password", $password, time() + (60 * 60 * 24 * 365));
             } else {
                 // Destroy cookie
-                // setcookie("username", "", -1);
                 setcookie("email", "", -1);
                 setcookie("password", "", -1);
             }
