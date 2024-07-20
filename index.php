@@ -62,12 +62,13 @@
             $email = '';
             $password = "";
 
-            if (isset($_COOKIE["username"])) {
-                $username = $_COOKIE["username"];
-            }
+            // if (isset($_COOKIE["username"])) {
+            //     $username = $_COOKIE["username"];
+            // }
 
             if (isset($_COOKIE["email"])) {
                 $email = $_COOKIE["email"];
+                
             }
 
             if (isset($_COOKIE["password"])) {

@@ -37,7 +37,7 @@ if (empty($email)) {
             if ($rememberme == "true") {
                 // Set cookie
                 setcookie("email", $email, time() + (60 * 60 * 24 * 365));
-                setcookie("password", $password, time() + (60 * 60 * 24 * 365));
+                setcookie("password", $password, time() + (60 * 60 * 24 * 365));  //time()= is now current time
             } else {
                 // Destroy cookie
                 setcookie("email", "", -1);
