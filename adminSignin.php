@@ -7,12 +7,12 @@ $password = "";
 
 if (isset($_COOKIE["email"])) {
 
-    $email = $_COOKIE["email"];
+    $email = $_COOKIE["email"];    //get the value of email and assign it to $email variable
 }
 
 if (isset($_COOKIE["password"])) {
 
-    $password = $_COOKIE["password"];
+    $password = $_COOKIE["password"]; //get the value of password and assign it to $password variable
 }
 
 
