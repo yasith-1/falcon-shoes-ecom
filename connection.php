@@ -1,7 +1,5 @@
 <?php
-
-class Database
-{
+class Database{
 
     public static $connnection;
 

@@ -22,19 +22,10 @@ function changeView() {
 
     signUpBox.classList.toggle("d-none");
     signInBox.classList.toggle("d-none");
-
-
+    
 }
 
 // TOGGLE BUTTON--------------------------------------------------------
-
-
-
-
-
-
-
-
 
 
 
@@ -56,13 +47,6 @@ function showOne() {
 
 
 
-
-
-
-
-
-
-
 // signin page password view------------------------------------
 function showTwo() {
     var textfield = document.getElementById("password2");
@@ -77,15 +61,6 @@ function showTwo() {
     }
 }
 // signin page password view------------------------------------
-
-
-
-
-
-
-
-
-
 
 
 
@@ -133,12 +108,6 @@ function signup() {
                     }
                 });
 
-                // fname.value = "";
-                // lname.value = "";
-                // email.value = "";
-                // mobile.value = "";
-                // username.value = "";
-                // password.value = "";
             } else {
                 Swal.fire({
                     title: response,
@@ -2341,13 +2310,13 @@ function genorderhistory() {
 function changeimages(id) {
 
     // alert(id); 
-    var vimage = document.getElementById("vimgid"+id).src;
+    var vimage = document.getElementById("vimgid" + id).src;
     var mainimage = document.getElementById("mimgid");
 
     // alert(vimage);
     mainimage.src = vimage;
 
-   
+
 
 }
 
@@ -2356,12 +2325,12 @@ function changeimages(id) {
 
 
 // Varient image add to database by admin
-function varientimgaddstock(){
+function varientimgaddstock() {
     // alert("ok");
 
-   var images = document.getElementById("vfile");
+    var images = document.getElementById("vfile");
 
-   var form = new FormData();
+    var form = new FormData();
     form.append("image", images.file[0]);
 
 
@@ -2374,6 +2343,6 @@ function varientimgaddstock(){
     }
     r.open("POST", "varientInageAddingProcess.php", true);
     r.send(form);
-   
+
 }
 // Varient image add to database by admin
