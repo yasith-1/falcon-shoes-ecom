@@ -1400,11 +1400,6 @@ function deleteimg() {
 
 }
 
-// Delete Profile Image 
-
-
-
-
 
 
 // Add to cart

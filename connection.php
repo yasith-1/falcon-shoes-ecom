@@ -3,8 +3,7 @@ class Database{
 
     public static $connnection;
 
-    public static function setupConnection()
-    {
+    public static function setupConnection(){
 
         if (!isset(Database::$connnection)) {
             Database::$connnection =  new mysqli("localhost", "root", "Yasith@1.", "myshop", "3306");
