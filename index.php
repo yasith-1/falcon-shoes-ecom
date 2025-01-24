@@ -62,13 +62,8 @@
             $email = '';
             $password = "";
 
-            // if (isset($_COOKIE["username"])) {
-            //     $username = $_COOKIE["username"];
-            // }
-
             if (isset($_COOKIE["email"])) {
                 $email = $_COOKIE["email"];
-                
             }
 
             if (isset($_COOKIE["password"])) {
@@ -78,11 +73,6 @@
             ?>
 
             <!-- USER COOKIE SETTING  ------------------------------------------>
-
-
-
-
-
 
             <div class="mt-3">
                 <label for="form-label" class="maininputfield"> &nbsp <i class="fa-solid fa-user-tie"></i> &nbsp; Email:</label>
