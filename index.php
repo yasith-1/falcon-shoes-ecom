@@ -58,19 +58,14 @@
 
             <?php
 
-            $username = "";
-            $email = '';
-            $password = "";
+            $email    = '';
 
-            if (isset($_COOKIE["email"])) {
-                $email = $_COOKIE["email"];
-            }
-
-            if (isset($_COOKIE["password"])) {
-                $password = $_COOKIE["password"];
+            if (isset($_COOKIE['rm_email'])) {
+                $email = htmlspecialchars($_COOKIE['rm_email'], ENT_QUOTES, 'UTF-8');
             }
 
             ?>
+
 
             <!-- USER COOKIE SETTING  ------------------------------------------>
 
@@ -82,7 +77,7 @@
 
             <label class="form-label mt-3 maininputfield"> &nbsp;<i class="fa-solid fa-lock"></i> &nbsp; Password </label>
             <div class="input-group col-12">
-                <input type="password" class="form-control inputfont bg-transparent border-light border rounded-start-5" id="password2" value="<?php echo $password ?>">
+                <input type="password" class="form-control inputfont bg-transparent border-light border rounded-start-5" id="password2" placeholder="Enter password">
                 <button class="btn border-light rounded-end-4" type="button" onclick="showTwo();" id="buttontwo">
                     <i class="fa-regular fa-eye"></i>
                 </button>

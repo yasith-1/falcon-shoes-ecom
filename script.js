@@ -228,22 +228,9 @@ function loadUser() {
 
 
 
-// Load Users in to a admin panel 
-
-function loadUsersdata() {
-
-    var r = new XMLHttpRequest();
-    r.onreadystatechange = function () {
-        if (r.readyState == 4 && r.status == 200) {
-            var response = r.responseText;
-            document.getElementById("tb").innerHTML = response;
-        }
-    };
-
-    r.open("POST", "loadUserProcess.php", true);
-    r.send();
-}
-// Load Users in to a admin panel 
+// Load Users in to admin panel (alias for backward compat)
+var loadUsersdata = loadUser;
+// Load Users in to admin panel
 
 
 
@@ -278,10 +265,10 @@ function updateUserStatus() {
                 });
 
 
-            } else if (response == "Ativated") {
+            } else if (response == "Activated") {
 
                 Swal.fire({
-                    title: "User Ativated Sucessfull",
+                    title: "User Activated Successfully",
                     text: response,
                     icon: "success"
                 }).then((result) => {
@@ -477,7 +464,7 @@ function signout() {
         if (request.status == 200 & request.readyState == 4) {
             var response = request.responseText;
             if (response == "success") {
-                window.location.reload();
+                window.location.href = "index.php";
             }
         }
     }

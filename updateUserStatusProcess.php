@@ -1,31 +1,43 @@
 <?php
+/**
+ * updateUserStatusProcess.php — Toggle user active/inactive status
+ * Security: prepared statements, admin auth required
+ */
+require_once __DIR__ . '/includes/session.php';
+require_once __DIR__ . '/includes/db.php';
 
-include "connection.php";
-$uid = $_POST["u"];
+requireAdminAuth();
 
-if (empty($uid)) {
-    # empty
-    echo ("Please Enter Your User ID");
-} else {
-    # success
-    $rs = Database::search("SELECT * FROM `user` WHERE `user_id`='$uid' AND `user_type_id`='2' ");
-    $num = $rs->num_rows;
+$uid = trim($_POST['u'] ?? '');
 
-    if ($num == 1) {
-        $d = $rs->fetch_assoc();
-
-        if ($d["status"] == 1) {
-
-            Database::iud("UPDATE `user` SET `status`='0' WHERE `user_id`='" . $uid . "' ");
-            echo ("Deactivated");
-        }
-
-        if ($d["status"] == 0) {
-            //    Active
-            Database::iud("UPDATE `user` SET `status`='1' WHERE `user_id`='" . $uid . "' ");
-            echo ("Ativated");
-        }
-    } else {
-        echo ("Invalid User ID ");
-    }
+if (empty($uid) || !is_numeric($uid)) {
+    echo 'Invalid User ID.';
+    exit;
 }
+
+$uid = (int) $uid;
+
+// Fetch user (only regular users, not admins)
+$rows = Database::preparedSearch(
+    'SELECT `user_id`, `status` FROM `user` WHERE `user_id` = ? AND `user_type_id` = 2 LIMIT 1',
+    'i',
+    [$uid]
+);
+
+if (empty($rows)) {
+    echo 'Invalid User ID.';
+    exit;
+}
+
+$user      = $rows[0];
+$newStatus = $user['status'] == 1 ? 0 : 1;
+$label     = $newStatus == 0 ? 'Deactivated' : 'Activated';
+
+Database::preparedIUD(
+    'UPDATE `user` SET `status` = ? WHERE `user_id` = ?',
+    'ii',
+    [$newStatus, $uid]
+);
+
+echo $label;
+?>

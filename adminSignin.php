@@ -1,24 +1,14 @@
 <?php
+require_once __DIR__ . '/includes/session.php';
 
-session_start();
+$email    = '';
+$password = '';
 
-$email = "";
-$password = "";
-
-if (isset($_COOKIE["email"])) {
-
-    $email = $_COOKIE["email"];    //get the value of email and assign it to $email variable
+if (isset($_COOKIE['admin_rm_email'])) {
+    $email = htmlspecialchars($_COOKIE['admin_rm_email'], ENT_QUOTES, 'UTF-8');
 }
-
-if (isset($_COOKIE["password"])) {
-
-    $password = $_COOKIE["password"]; //get the value of password and assign it to $password variable
-}
-
-
-
+// SECURITY: Never pre-fill password fields from cookies
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
@@ -64,7 +54,7 @@ if (isset($_COOKIE["password"])) {
 
                         <div class="mt-4 col-12">
                             <label class="form-label" style="font-family: poppins; font-size: 15px;">&nbsp;<i class="fa-solid fa-lock"></i>&nbsp;&nbsp; Password </label>
-                            <input type="password" class="form-control rounded-5 bg-transparent border-secondary" id="apw" value="<?php echo $password ?>">
+                            <input type="password" class="form-control rounded-5 bg-transparent border-secondary" id="apw" placeholder="Enter password">
                         </div>
 
                         <div class="mt-4 col-12">

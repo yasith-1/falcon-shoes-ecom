@@ -1,14 +1,11 @@
 <?php
+require_once __DIR__ . '/includes/session.php';
 
-session_start();
-
-if (!isset($_SESSION["a"])) {
-    // No set
-    echo ("Please ! Loging First..");
-    
-} else {
-    $_SESSION["a"] = "";
-    session_destroy();
-
-    echo ("success");
+if (!isset($_SESSION['a'])) {
+    echo 'Please login first.';
+    exit;
 }
+
+destroySession();
+echo 'success';
+?>

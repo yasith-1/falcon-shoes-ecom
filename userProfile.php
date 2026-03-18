@@ -1,6 +1,6 @@
 <?php
-include "connection.php";
-session_start();
+require_once __DIR__ . '/includes/session.php';
+require_once __DIR__ . '/includes/db.php';
 
 if (isset($_SESSION["u"])) {
 
@@ -21,7 +21,7 @@ if (isset($_SESSION["u"])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>User Profile | eShop</title>
+        <title>User Profile | Falcon Shoes</title>
 
         <link rel="stylesheet" href="bootstrap.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -117,11 +117,12 @@ if (isset($_SESSION["u"])) {
                                             <div class="col-6 mt-3">
                                                 <label class="form-label">Password</label>
                                                 <div class="input-group">
-                                                    <input type="password" class="form-control bg-transparent border-info disabled" readonly style="cursor: not-allowed;" value="<?php echo $d["password"] ?>" id="pw" />
-                                                    <span class="input-group-text bg-primary" id="btn3" onclick="userpassword();">
-                                                        <i class="fa-regular fa-eye text-white"></i>
+                                                    <input type="password" class="form-control bg-transparent border-info" readonly style="cursor: not-allowed;" placeholder="••••••••" id="pw" />
+                                                    <span class="input-group-text bg-secondary" title="Password cannot be viewed for security reasons">
+                                                        <i class="fa-solid fa-shield text-white"></i>
                                                     </span>
                                                 </div>
+                                                <small class="text-muted">Use the Forgot Password feature to change your password.</small>
                                             </div>
 
 
