@@ -47,8 +47,8 @@ if ($num2 == 0) {
 ?>
         <!-- Card -->
 
-        <div class="card col-12 col-md-3 mycard rounded-4" style="width: 350px">
-            <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>"><img src=" <?php echo $d["path"] ?> " class="card-img-top mt-3 " alt="..." style="height: 280px;" /></a>
+        <div class="card col-12 col-md-3 mycard">
+            <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>"><img src="<?php echo $d["path"] ?>" class="card-img-top" alt="Product Image" style="height: 280px; object-fit: cover;" /></a>
 
             <div class="card-body">
                 <h5 class="card-title text-center pfont"> <?php echo $d["name"] ?> </h5>

@@ -50,7 +50,7 @@
     <div class="container d-flex justify-content-center align-items-center vh-100 mt-2 ">
 
         <!--sign In Box--------------------------------------------------------------------------------------------------------->
-        <div class="signIn_Box bg-body-tertiary mt-3 rounded-4 bg-opacity-25 border border-1 border-bg-light-subtle" id="signIn_Box">
+        <div class="signIn_Box mt-3" id="signIn_Box">
             <h2 class="text-center" style="letter-spacing: 1px;">Login</h2>
 
 
@@ -139,7 +139,7 @@
 
 
         <!-- Sign Up Box ------------------------------------------------------------------------------------------------------------------>
-        <div class="signUp_Box mt-3 ms-3 bg-body-tertiary bg-opacity-25 border border-1 border-bg-secondary-subtle d-none" id="signUp_Box">
+        <div class="signUp_Box mt-3 ms-3 d-none" id="signUp_Box">
 
             <h2 class="text-center" style="letter-spacing: 1px;">Register</h2>
 

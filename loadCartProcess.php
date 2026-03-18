@@ -44,7 +44,7 @@ if ($num > 0) {
             $nettotal += $total;
         ?>
             <!-- Cart Items -->
-            <div class="row col-lg-10 offset-lg-1 border border-1 rounded-3 p-3 shadow-lg bg-body-tertiary justify-content-between mb-3">
+            <div class="row col-lg-10 offset-lg-1 glass-panel p-3 justify-content-between mb-3">
                 <div class="d-flex align-items-center col-12 col-md-5">
                     <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>"><img src="<?php echo $d["path"] ?>" alt="" class="rounded-4 shadow-lg img-fluid spv" style="max-height: 130px;"></a>
 
@@ -77,7 +77,7 @@ if ($num > 0) {
 
         <div class="col-12 col-lg-10 offset-lg-1 d-flex justify-content-end mt-3 mb-3 ">
             <!-- Total summary -->
-            <div class="col-12 col-lg-5 border border-1 rounded-3 p-2 px-4 shadow-lg bg-body-tertiary d-flex flex-column ">
+            <div class="col-12 col-lg-5 glass-panel p-3 d-flex flex-column ">
                 <div class="text-center col-md-12">
                     <h4 class="text-light" style="font-family: poppins;">Total Cart Summary</h4>
                 </div>

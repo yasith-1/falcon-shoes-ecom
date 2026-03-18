@@ -51,7 +51,7 @@ if (isset($_SESSION["u"])) {
                                     <h2 class="fw-bold text-center mb-3" style="font-family: poppins; letter-spacing: 3px; ">USER INFO</h2>
                                 </div>
 
-                                <div class="col-md-4  col-sm-12 border  border-light rounded-3 mt-sm-3 mt-lg-0 ">
+                                <div class="col-md-4 col-sm-12 glass-panel mt-sm-3 mt-lg-0">
                                     <div class="d-flex flex-column align-items-center text-center p-3 py-5">
 
                                         <img src=" <?php if (!empty($d["img_path"])) {
@@ -79,7 +79,7 @@ if (isset($_SESSION["u"])) {
                                     </div>
                                 </div>
 
-                                <div class="col-md-7   border border-secondary rounded-3 ms-lg-1 mt-sm-3 mt-lg-0 ">
+                                <div class="col-md-7 glass-panel ms-lg-3 mt-sm-3 mt-lg-0">
                                     <div class="p-4">
 
                                         <div class="col-12 mt-3  d-flex flex-row justify-content-center">

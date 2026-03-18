@@ -32,7 +32,7 @@ if (isset($_COOKIE['admin_rm_email'])) {
 
     <div class="container d-flex justify-content-center" style="margin-top: 20px;">
 
-        <div class="card mb-3 border border-2 border-warning-subtle shadow-lg rounded-4 bg-transparent pb-0 pt-0">
+        <div class="card mb-3 adminsignin_box p-0 border-0">
             <div class="row g-0">
 
                 <!-- image -->
